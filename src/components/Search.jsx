@@ -4,8 +4,8 @@ function search() {
   return (
     
     <>
-    <form>
-         <h2 className="relative w-96 md:w-32">
+    <form className=''>
+         <h2 className="relative w-96 md:w-32 flex justify-center">
             <input type="search" id="default-search"  placeholder="Buscar" required>
             </input>
             <button type="submit" >Buscador</button>
