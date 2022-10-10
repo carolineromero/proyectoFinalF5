@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../assets/img/perfil.png'
-import ProfileForm from '../components/ProfileForm'
+import ProfileForm from '../components/profiles/ProfileForm'
 
 
 
