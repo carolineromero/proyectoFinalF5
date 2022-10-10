@@ -1,9 +1,10 @@
 import React from 'react'
+import FormNewEmploy from '../components/FormNewEmploy'
 
 function Home() {
   return (
     <>
-   <h1>hola</h1>
+   <FormNewEmploy/>
     </>
   )
 }
