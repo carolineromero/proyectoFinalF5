@@ -1,11 +1,12 @@
-import React from 'react'
-import SearchComponent from '../components/SearchComponent'
-
+import React from 'react';
+import Header from '../components/Header';
+import Name from '../components/Name'
 
 function Home() {
   return (
     <>
-      <SearchComponent/>
+  <Header/>
+  <Name/>
     </>
   )
 }
