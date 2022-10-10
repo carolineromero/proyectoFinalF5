@@ -1,17 +1,21 @@
 import React from 'react'
 import image from '../assets/img/perfil.png'
 import ProfileForm from '../components/ProfileForm'
+import Header from '../components/Header'
 
 
 
 function Profile() {
   return (
-<div className='ProfileForm md:container md:mx-auto box-border place-content-center '>
+    <div>
+        <Header/>
+<div className='ProfileForm w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-moradoFuerteF5 lg:max-w-xxl '>
     
-<div className="containerImg m-80-auto, py-30-20,pl-0,rounded-none object-cover place-items-center bg-violet-300">
+<div className="containerImg w-full p-6 m-auto bg-white rounded-md ring-2 ring-moradoFuerteF5 max-h-full">
  <img className="h-48 w-full object-cover md:h-full md:w-48 flex items-center rounded-l" src={image} alt=""/>
 </div>
-    <ProfileForm>
+    <ProfileForm/>
+   
 {/*  
     <div className="body">
         <div className="Informe de Registro flexsm (640px)shadow-md ">
@@ -38,7 +42,8 @@ function Profile() {
                         </input></div>
                         <button className="btn">Editar</button>
                 </div> */}
-                </ProfileForm>
+              
+    </div>
     </div>
   )
   
