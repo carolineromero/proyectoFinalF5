@@ -4,57 +4,92 @@ import React from 'react'
 function FormNewEmploy() {
   return (
     <> 
-<div className="">
-<div className="">      
-  <h1>New Employee Admission</h1>
-  <form >        
-         <p>
-        <label for="name" className="place_name">Name
-                <span className="required">*</span>
-        </label>
-            <input type="text" name="enter_name" id="name" required="required" placeholder="write your name"/>
-         </p>  
-        <p>
-             <label for="email" className="place_email">Email
-                <span className="required">*</span>
-              </label>
-                <input type="email" name="enter_email" id="email" required="required" placeholder="write your email"/>
-            </p>
-        
-            <p>
-              <label for="telephone" className="place_telephone">Teléfono
-              </label>
-                <input type="tel" name="enter_telephone" id="telephone" placeholder="write your telephone"/>
-            </p>    
-          
-            <p>
-              <label for="dni" className="place_dni">Dni
-              </label>
-                <input type="url" name="enter_dni" id="dni" placeholder=" dni"/>
-            </p>    
-          
-            <p>
-              <label for="position" className="place_position">cargo
-                <span className="resquired">*</span>
-              </label>
-                <input type="text" name="enter_position" id="position" required="required" placeholder="Escribe un cargo"/>
-            </p>    
-          
-            <p>
-              <label for="mensaje" className="colocar_mensaje">Mensaje
-                <span className="obligatorio">*</span>
-              </label>                     
-                                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                            </p>                    
-          
-            <button type="submit" name="enviar_formulario" id="nuevo"><p>enviar</p></button>
 
-            <p class="aviso">
-              <span class="obligatorio"> * </span>los campos son obligatorios.
-            </p>          
-        
-      </form>
-</div>  
+<div className="flex items-center justify-center p-12">
+
+    <div className="mx-auto w-full max-w-[550px]">
+      <form action="https://formbold.com/s/FORM_ID" method="POST">
+      <div className="mb-5">
+          <label for="name" className="mb-3 block text-base font-medium text-[#07074D]">
+          Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+
+      <div className="mb-5">
+          <label for="surnames" className="mb-3 block text-base font-medium text-[#07074D]">
+           Surnames
+          </label>
+          <input
+           type="surnames"
+            name="surnames"
+            id="surnames"
+            placeholder="Surnames"
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+
+      <div className="mb-5">
+         <label for="email" className="mb-3 block text-base font-medium text-[#07074D]">
+          Email
+          </label>
+          <input
+           type="email"
+            name="email"
+            id="email"
+            placeholder="example@domain.com"
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+
+      <div className="mb-5">
+          <label
+            for="dni"
+            className="mb-3 block text-base font-medium text-[#07074D]">
+           Dni
+          </label>
+          <input
+           type="dni"
+           name="dni"
+           id="dni"
+           placeholder="enter your dni"
+           className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+
+      <div className="mb-5">
+          <label for="telephone" className="mb-3 block text-base font-medium text-[#07074D]">
+          telephone
+          </label>
+          <input
+            type="text"
+            name="telephone"
+            id="telephone"
+            placeholder="Enter your number"
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+      <div className="mb-5">
+          <label
+            for="cargo"
+            className="mb-3 block text-base font-medium text-[#07074D]">
+            Cargo
+          </label>
+          <input
+            type="cargo"
+            name="cargo"
+            id="cargo"
+            placeholder="enter your position"
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+      <div>
+        <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
     </>
   )
