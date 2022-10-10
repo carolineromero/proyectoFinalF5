@@ -4,10 +4,10 @@ import Name from '../components/home/Name'
 
 function Home() {
   return (
-    <>
-  <Header/>
-  <Name/>
-    </>
+  <>
+    <Header/>
+    <Name/>
+  </>
   )
 }
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 
+
 const SearchComponent = () => {
   //setear los hooks useState
   const [ users, setUsers ] = useState([])
@@ -42,16 +43,15 @@ const SearchComponent = () => {
   //renderizamos la vista
   return (
     <div>
-    <form className='text-slate-100'>
+    <form className='text-slate-100 top-3 bottom-1'>
          <h2 className="relative flex justify-center">
-            <input value={search} onChange={searcher} type="search" id="default-search"  placeholder=" Buscar " className="bg-cianF5  rounded-xl flex content-center" required> 
+            <input value={search} onChange={searcher} type="search" id="default-search"   className="bg-lilaF5  rounded-xl flex content-center" fill="moradoFuerteF5"required> 
             </input>
          </h2> 
     </form>
-    <img src='' className="img-responsive"></img>
     <table>
         <thead className="">
-          <tr className="relative flex justify-center text-lilaF5">
+          <tr className="relative flex justify-center text-moradoFuerteF5">
             <th>NAME</th>
             <th>USER NAME</th>
           </tr>
