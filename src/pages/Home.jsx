@@ -1,9 +1,10 @@
 import React from 'react'
+import LogInPage from './LogInPage'
 
 function Home() {
   return (
     <>
-   <h1>hola</h1>
+   <LogInPage/>
     </>
   )
 }
