@@ -5,7 +5,6 @@ import Name from '../components/Name'
 function Home() {
   return (
     <>
-    
   <Header/>
   <Name/>
     </>
