@@ -12,8 +12,8 @@ function Router() {
   return (
     <BrowserRouter>
         <Routes> 
-            <Route path="/login" element={<LogInPage/>} />
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<LogInPage/>} />
+            <Route path="/home" element={<Home />} />
             <Route path="/workers" element={<Workers />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/new-employ" element={<PageNewEmploy />} />

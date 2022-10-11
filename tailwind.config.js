@@ -6,20 +6,19 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'moradoFuerteF5':'#4311B9',
+        'moradoFuerteF5':'#4312B9',
         'naranjaF5' :'#FF4700',
         'lilaF5':'#CBBFE8',
         'cianF5':'#33C8CD',
-        'rositaF5':'#FED2C0',
+        'rositaF5':'#FED3C0',
+        'grisF5':'#E4D9FF',
       },
       backgroundSize:{
         '50%': '50%',
         '100%' : '100%',
         '16' : '4rem'
       },
-      screens: {
-        'md' : '414px',
-      }
+    
     },
   },
   plugins: [],
