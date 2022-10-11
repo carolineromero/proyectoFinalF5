@@ -9,7 +9,6 @@ function Workers() {
     <Header/> 
     <SearchComponent/>
     <Search/>
-   
     </>
   )
 }

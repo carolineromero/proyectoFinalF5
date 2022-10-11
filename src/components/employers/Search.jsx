@@ -46,7 +46,6 @@ const methodGet=async()=>{
             </input>
          </h2> 
     </form>
- 
     <div class="my-2 flex h-16 items-center justify-between rounded-lg border-2 border-b-4 border-l-4 
     border-moradoFuerteF5 px-4 shadow-xl">
       <div class="flex items-center">

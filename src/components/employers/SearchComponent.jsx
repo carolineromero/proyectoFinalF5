@@ -35,7 +35,6 @@ const SearchComponent = () => {
     )
    }
     
-  
   useEffect( ()=> {
   methodGet()
   }, [])
