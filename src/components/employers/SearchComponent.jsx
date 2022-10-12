@@ -44,7 +44,7 @@ const SearchComponent = () => {
     <>
     <form className='text-slate-100'>
          <h2 className="relative flex justify-center">
-            <input value={search} onChange={searcher} type="search" id="search"   className="bg-grisF5  rounded-xl flex content-center" fill="moradoFuerteF5"required> 
+            <input value={search} onChange={searcher} type="search" id="search"   className="bg-slate-100 rounded-xl flex content-center" required> 
             </input>
          </h2> 
     </form>
@@ -54,13 +54,13 @@ const SearchComponent = () => {
     <a href="http://localhost:3000/profile"><img className="w-10 rounded-full img-responsive"src={face} />
     </a>
       <thead className="ml-2">
-        <tr className="relative flex justify-center text-lilaF5">
+        <tr className="relative flex justify-center text-moradoFuerteF5">
           <th className="text-xs font-semibold text-moradoFuerteF5">Nombre</th>
           <th className="flex text-xs font-light text-gray-600">Horario de trabajo</th>
         </tr>
       </thead>
     </div>  
-    <tbody className="flex flex-col w-full relative bottom-0">
+    <tbody className="flex flex-col w-full relative bottom-2">
         { results.map( (user) => (
         <tr key={user.id}>
           <td>{user.name}</td>
