@@ -11,7 +11,7 @@ function FormNewEmploy() {
       <form action="https://formbold.com/s/FORM_ID" method="POST">
       <div className="mb-5">
           <label for="name" className="mb-3 block text-base font-medium text-[#07074D]">
-          Name
+          Nombre
           </label>
           <input
             type="text"
@@ -49,7 +49,7 @@ function FormNewEmploy() {
           <label
             for="dni"
             className="mb-3 block text-base font-medium text-[#07074D]">
-           Dni
+           DNI
           </label>
           <input
            type="dni"
@@ -61,7 +61,7 @@ function FormNewEmploy() {
 
       <div className="mb-5">
           <label for="telephone" className="mb-3 block text-base font-medium text-[#07074D]">
-          telephone
+          Telefono
           </label>
           <input
             type="text"
@@ -84,8 +84,8 @@ function FormNewEmploy() {
             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
       <div>
-        <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
-          Submit
+        <button className="hover:shadow-form rounded-md bg-moradoFuerteF5 py-3 px-8 text-base font-semibold text-white outline-none">
+          Crear nuevo
         </button>
       </div>
     </form>

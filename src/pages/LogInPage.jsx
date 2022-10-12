@@ -12,12 +12,9 @@ function LogInPage(){
         <LogIn/>
         <p className="mt-8 text-xs font-light text-center text-gray-700">
                     {" "}
-                    Don't have an account?{" "}
-                    <a
-                        href="#"
-                        className="font-medium text-purple-600 hover:underline"
-                    >
-                        Sign up
+                    No tienes cuenta?{" "}
+                    <a href="#"className="font-medium text-moradoFuerteF5 hover:underline">
+                    Creala
                     </a>
                 </p>
             </div>
