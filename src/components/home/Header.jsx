@@ -11,7 +11,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <div className="m-0 flex justify-between bg-lilaF5 p-4 md:bg-slate-100 ">
+    <div className="m-0 flex justify-between bg-grisF5 p-4 md:bg-slate-100 ">
     <img src={logoSomosF5} alt="logo F5" className='w-18' />
     <Menu as="div" className="relative inline-block text-left">
       <div>
