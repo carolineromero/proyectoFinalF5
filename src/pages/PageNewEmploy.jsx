@@ -1,12 +1,13 @@
 import React from 'react'
-import FormNewEmploy from '../components/new-employer/FormNewEmploy'
 import Header from '../components/home/Header'
+import FormNewEmploy from '../components/new-employer/FormNewEmploy'
+
 
 function PageNewEmploy() {
   return (
-    <>
+   <>
     <Header/>
-   <FormNewEmploy/>
+    <FormNewEmploy/>
    </>
   )
 }

@@ -25,7 +25,7 @@ function FormNewEmploy() {
            Surnames
           </label>
           <input
-           type="surnames"
+           type="text"
             name="surnames"
             id="surnames"
             placeholder="Surnames"
@@ -37,7 +37,7 @@ function FormNewEmploy() {
           Email
           </label>
           <input
-           type="email"
+           type="text"
             name="email"
             id="email"
             placeholder="example@domain.com"
@@ -51,7 +51,7 @@ function FormNewEmploy() {
            Dni
           </label>
           <input
-           type="dni"
+           type="number"
            name="dni"
            id="dni"
            placeholder="enter your dni"
@@ -63,7 +63,7 @@ function FormNewEmploy() {
           telephone
           </label>
           <input
-            type="text"
+            type="number"
             name="telephone"
             id="telephone"
             placeholder="Enter your number"
@@ -76,10 +76,10 @@ function FormNewEmploy() {
             Cargo
           </label>
           <input
-            type="cargo"
+            type="text"
             name="cargo"
             id="cargo"
-            placeholder="enter your position"
+            placeholder="enter your cargo"
             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
       <div className="mb-5">
@@ -89,11 +89,24 @@ function FormNewEmploy() {
             Image
           </label>
           <input
-            type="image"
+            type="png"
             name="image"
             id="image"
             placeholder=""
             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+      <div className="mb-5">
+          <label
+            for="contraseña"
+            className="mb-3 block text-base font-medium text-[#07074D]">
+           Contraseña
+          </label>
+          <input
+           type="text"
+           name="contraseña"
+           id="contraseña"
+           placeholder="enter your contraseña"
+           className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
      
       <div>
