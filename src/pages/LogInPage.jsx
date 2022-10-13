@@ -2,6 +2,7 @@ import LogIn from "../components/login/LogIn";
 import React from "react";
 import "../index.css"
 
+
 function LogInPage(){
     return(
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden mx-6">

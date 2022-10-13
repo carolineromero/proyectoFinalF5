@@ -3,7 +3,7 @@ import React from 'react'
 function Name() {
   return (
     <>
-    <div className="flex justify-center flex-col md ">
+    <div className="flex justify-center flex-col md relative ">
     <h4 className="text-1xl font-bold self-center text-moradoFuerteF5">
       Hola..
     </h4>  

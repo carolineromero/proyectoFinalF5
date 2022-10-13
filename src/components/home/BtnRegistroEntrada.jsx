@@ -5,13 +5,13 @@ function BtnRegistroEntrada() {
   return (
     <>
    
-    <div className="flex justify-center">
+    <div className="flex justify-center relative">
         <h4 className="text-1xl font-bold flex self-center bg-cianF5 w-max p-5 m-4 rounded-2xl text-white">
           Registrar entrada
         </h4> 
 
     </div>
-    <div className='flex justify-center'>
+    <div className='flex justify-center relative'>
         <div className='flex flex-col justify-between   bg-violet-300 p-5 rounded-lg w-200'>
             <div className='flex justify-around '>
                 <div className="bg-green-400 w-14 h-14 rounded-full ml-0.5"> </div>
