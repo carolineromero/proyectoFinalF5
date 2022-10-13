@@ -110,13 +110,8 @@ function FormNewEmploy() {
       </div>
      
       <div>
-<<<<<<< HEAD
-        <button className="hover:shadow-form rounded-md bg-moradoFuerteF5 py-3 px-8 text-base font-semibold text-white outline-none">
-          Crear nuevo
-=======
         <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
           Crear Nuevo
->>>>>>> carmen
         </button>
       </div>
     </form>
