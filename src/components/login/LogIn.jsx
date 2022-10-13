@@ -17,12 +17,12 @@ const persons = [
     {
       email: "dina@gmail.com",
       password: "dina@gmail.com",
-      rol: "employer",
+      rol: "employee",
     },
     {
       email: "carol@gmail.com",
       password: "carol@gmail.com",
-      rol: "employer",
+      rol: "employee",
     },
   ];
   function LogIn() {
@@ -30,7 +30,6 @@ const persons = [
     console.log(inputUser);
     const [inputPassword, setInputPassword] = useState("");
     console.log(inputPassword);
-    const [userMatch, setUserMatch] = useState("");
     const [success, setSuccess] = useState(false);
   
     const goToDashboard = () => {

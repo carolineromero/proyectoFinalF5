@@ -5,37 +5,29 @@ function ProfileForm() {
     <body>
     <div className="container columns-1 place-content-center">
         <form action="" class="formulario">
-           
-            <h2 class="titulo">informe de Registro</h2>
-            <div class="padre">
-                <div class="DNI">
+            <h2 className="titulo">informe de Registro</h2>
+            <div className="padre">
+                <div className="DNI">
                     <label for="">DNI</label>
                     <input type="text"/>
-
                 </div>
-                <div class="Telefono">
+                <div className="Telefono">
                     <label for="">Telefono</label>
                     <input type="numbers"/>
-
                 </div>
-                <div class="Email">
+                <div className="Email">
                     <label for="">Email</label>
                     <input type="email"/>
-
                 </div>
-                <div class="cargo">
+                <div className="cargo">
                     <label for="">Cargo</label>
                     <input type="text"/>
-
                 </div>
-                <div class="button">
+                <div className="button">
                     <input type="button" value="Editar"/>
                 </div>
-
             </div>
-
         </form>
-
     </div>
 </body>
   )

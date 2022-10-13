@@ -17,7 +17,6 @@ function Router() {
             <Route path="/workers" element={<Workers />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/new-employ" element={<PageNewEmploy />} />
-
         </Routes>
     </BrowserRouter>
   )
