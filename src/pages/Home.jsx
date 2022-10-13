@@ -5,6 +5,7 @@ import Name from '../components/home/Name'
 import ProgressBar from '../components/home/ProgressBar';
 import WeeksDays from '../components/home/WeeksDays';
 
+
 function Home() {
   return (
     <>  

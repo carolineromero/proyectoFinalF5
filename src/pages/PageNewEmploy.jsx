@@ -5,10 +5,17 @@ import FormNewEmploy from '../components/new-employer/FormNewEmploy'
 
 function PageNewEmploy() {
   return (
+<<<<<<< HEAD
   <>
     <Header/>
     <FormNewEmploy/>
   </>
+=======
+   <>
+    <Header/>
+    <FormNewEmploy/>
+   </>
+>>>>>>> carmen
   )
 }
 
