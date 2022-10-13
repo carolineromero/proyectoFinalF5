@@ -4,7 +4,6 @@ import React from 'react'
 function FormNewEmploy() {
   return (
     <> 
-
 <div className="flex items-center justify-center p-12">
 
     <div className="mx-auto w-full max-w-[550px]">
@@ -26,7 +25,7 @@ function FormNewEmploy() {
            Surnames
           </label>
           <input
-           type="surnames"
+           type="text"
             name="surnames"
             id="surnames"
             placeholder="Surnames"
@@ -38,7 +37,7 @@ function FormNewEmploy() {
           Email
           </label>
           <input
-           type="email"
+           type="text"
             name="email"
             id="email"
             placeholder="example@domain.com"
@@ -52,7 +51,7 @@ function FormNewEmploy() {
            DNI
           </label>
           <input
-           type="dni"
+           type="number"
            name="dni"
            id="dni"
            placeholder="enter your dni"
@@ -64,7 +63,7 @@ function FormNewEmploy() {
           Telefono
           </label>
           <input
-            type="text"
+            type="number"
             name="telephone"
             id="telephone"
             placeholder="Enter your number"
@@ -77,15 +76,47 @@ function FormNewEmploy() {
             Cargo
           </label>
           <input
-            type="cargo"
+            type="text"
             name="cargo"
             id="cargo"
-            placeholder="enter your position"
+            placeholder="enter your cargo"
             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
+      <div className="mb-5">
+          <label
+            for="image"
+            className="mb-3 block text-base font-medium text-[#07074D]">
+            Image
+          </label>
+          <input
+            type="png"
+            name="image"
+            id="image"
+            placeholder=""
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+      <div className="mb-5">
+          <label
+            for="contraseña"
+            className="mb-3 block text-base font-medium text-[#07074D]">
+           Contraseña
+          </label>
+          <input
+           type="text"
+           name="contraseña"
+           id="contraseña"
+           placeholder="enter your contraseña"
+           className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
+      </div>
+     
       <div>
+<<<<<<< HEAD
         <button className="hover:shadow-form rounded-md bg-moradoFuerteF5 py-3 px-8 text-base font-semibold text-white outline-none">
           Crear nuevo
+=======
+        <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+          Crear Nuevo
+>>>>>>> carmen
         </button>
       </div>
     </form>
