@@ -1,50 +1,3 @@
-/* /* import React from 'react'
-import logoSomosF5 from '../assets/img/header/somosF5-logoMorado.svg'
-import plusicon from '../assets/img/header/plus.png'
-
-function Header() {
-  return (
-    <>
-       <h1 className="text-3xl font-bold underline text-naranjaF5 font-">
-      Hello world!
-    </h1>  
-
-    <div className="m-0 flex justify-between bg-lilaF5 p-4 md">
-    <img src={logoSomosF5} alt="logo F5" className='w-18' />
-    <img src={plusicon} alt= "icono mas" className="w-8 "/>
-      
-    </div>
-   
-
-    </>
-  )
-}
-
-export default Header 
-
-import React from "react";
-import plusicon from '../assets/img/header/plus.png'
-import logoSomosF5 from '../assets/img/header/somosF5-logoMorado.svg'
-
-export default function DropdownComponent() {
-    return (
-      <>
-      <div className="m-0 flex justify-between bg-lilaF5 p-4 md">
-    <img src={logoSomosF5} alt="logo F5" className='w-18' />
-        <div className="relative w-full lg:max-w-sm flex justify-end">
-            <select className="w-8 p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none   focus:border-indigo-600 ">
-                <option><img src={plusicon} alt= "icono mas" className="w-8 "/></option>
-                <option>Perfil</option>
-                <option>Trabajadores</option>
-                <option>Salir</option>
-            </select>
-        </div>
-        </div>
-        </>
-    );
-}
- */
-
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
@@ -64,7 +17,7 @@ export default function Example() {
       <div>
         <Menu.Button className="inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
           <img src={cerrarIcon} alt="icono cerrar" className="w-9" />
-        {/*   <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" /> */}
+       
         </Menu.Button>
       </div>
 
