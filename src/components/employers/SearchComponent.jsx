@@ -44,7 +44,7 @@ const SearchComponent = () => {
     <>
     <form className='text-slate-100'>
          <h2 className="relative flex justify-center">
-            <input value={search} onChange={searcher} type="search" id="search"   className="bg-slate-100 rounded-xl flex content-center" required> 
+            <input value={search} onChange={searcher} type="search" id="search"   className="bg-slate-100 rounded-xl flex content-center" fill="moradoFuerteF5"required> 
             </input>
          </h2> 
     </form>

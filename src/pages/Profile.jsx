@@ -15,33 +15,7 @@ function Profile() {
  <img className="h-48 w-full object-cover md:h-full md:w-48 flex items-center rounded-l" src={image} alt=""/>
 </div>
     <ProfileForm>
-{/*  
-    <div className="body">
-        <div className="Informe de Registro flexsm (640px)shadow-md ">
-    <label for="">Informe de Registro</label>
-                    <input type="text">
-                        </input>
-                        </div>
-
-
-                   <div className="#cbd5e1"> <label for="">DNI</label>
-                    <input type="">
-                        </input></div>
-
-                       <div className="#cbd5e1"> <label for="Telefono">Telefono</label>
-                    <input type="number">
-                        </input></div>
-
-                      <div> <label for="">Email</label>
-                    <input type="text">
-                        </input></div> 
-
-                       <div> <label for="">Cargo</label>
-                    <input type="text">
-                        </input></div>
-                        <button className="btn">Editar</button>
-                </div> */}
-                </ProfileForm>
+    </ProfileForm>
     </div>
     </>
   )
