@@ -3,6 +3,7 @@ import "../../index.css";
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 
+
 const persons = [
   {
     email: "alexandra@gmail.com",
@@ -48,6 +49,7 @@ function LogIn() {
 
   return (
     <div>
+       
         <div>
             {success ? <Navigate replace to="/home"/> : "" }
         </div>
@@ -80,9 +82,9 @@ function LogIn() {
             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
           />
         </div>
-        <a href="#" className="text-xs text-purple-600 hover:underline">
+        {/* <a href="#" className="text-xs text-purple-600 hover:underline">
           Forget Password?
-        </a>
+        </a> */}
         <div className="mt-6">
           <button
             onClick={() => goToDashboard()}

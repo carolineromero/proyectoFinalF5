@@ -1,17 +1,27 @@
 import React from 'react'
 import image from '../../assets/img/perfil.png'
+import Vector from '../../assets/img/background/Vector.png'
 
 function ProfileForm() {
   return (
            <body>
-            <div className='ProfileForm w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-moradoFuerteF5 object-fill '>
+           
+        <div className='relative bg-gray-80 opasity-0 w-full ,ax-w-lg '>
+          <div className='absolute top-0 -right-4 w-60 h-60 bg-purple-300 z-10 filter blur-3xl rounded-full'></div>
+          <div className='absolute bottom-0 -left-4 w-60 h-60 bg-purple-300 filter blur-3xl rounded-full'></div>
+          <img className="absolute content-center -right-10 top-2/4 z-10 w-60 h-60 fiter blur-3xl" src={Vector} alt=""/>
+        {/*   <img className="absolute m-400 -right-10 w-40 h-40 " src={Vector} alt=""/> */}
+          
         
-        <div className="containerImg w-full p-6 m-auto bg-white rounded-md ring-2 ring-moradoFuerteF5 max-h-full">
+         <div className='item-center justify-center p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-moradoFuerteF5 '>
+        
+        <div className=" w-auto p-6 m-auto bg-white rounded-md ring-2 ring-moradoFuerteF5 max-h-full">
          <img className="h-48 w-full object-cover md:h-full md:w-48 flex items-center rounded-l" src={image} alt=""/>
         </div>
         </div>
-        <div className="container columns-1 place-content-center shadow-sm lg:max-w-xxl">
-        <form className="mt-6">
+        <div className="flex min-h-full items-center justify-center ">
+        <form className="mt-6 item-center justify-center">
+            
                                 <div className="mb-2">
                                     <label
                                         for="Nombre"
@@ -92,12 +102,31 @@ function ProfileForm() {
                                        Editar
                                     </button>
                                 </div>
+                                <div className="mb-2">
+                                    <label
+                                        for="Filtro de fichaje"
+                                        className="block text-sm font-semibold text-gray-800"
+                                    >
+                                       Filtro de fichaje
+                                    </label>
+                                    <input
+                                        type="Horas Semanales"
+                                        className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                                    />
+                                </div>
+                                <div className="mt-6">
+                                    <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
+                                       Entrar
+                                    </button>
+                                </div>
+                             
                             </form>
             
                        
         
         </div>
-        
+        </div>
+    
     </body>
     
         

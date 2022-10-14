@@ -4,12 +4,16 @@ import Header from '../components/home/Header'
 
 
 
+
 function Profile() {
   return (
     <>
     <Header/>
     
-    <ProfileForm/>       
+    <ProfileForm/> 
+    
+    
+
     </>
   ) 
 }

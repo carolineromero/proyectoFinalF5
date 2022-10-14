@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import face from '../../assets/img/searchimg/face.jpg'
+import face from '../../assets/img/searching/face.jpg'
 
 
 const SearchComponent = () => {
