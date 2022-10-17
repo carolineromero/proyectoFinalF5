@@ -1,29 +1,28 @@
 import LogIn from "../components/login/LogIn";
 import React from "react";
 import "../index.css"
+import Vector from "../assets/img/background/Vector.png"
+import logoSomosF5 from '../assets/img/header/somosF5-logoMorado.svg'
 
 function LogInPage(){
     return(
-        <div className="relative flex flex-col justify-center min-h-screen overflow-hidden mx-6">
-            <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-moradoFuerteF5 lg:max-w-xl">
-                <h1 className="text-3xl font-semibold text-center text-moradoFuerteF5 underline uppercase decoration-wavy">
-                   Sign in
-                </h1>
+        <>
+       
         <LogIn/>
-        <p className="mt-8 text-xs font-light text-center text-gray-700">
-                    {" "}
-                    Don't have an account?{" "}
-                    <a
-                        href="#"
-                        className="font-medium text-purple-600 hover:underline"
-                    >
-                        Sign up
-                    </a>
-                </p>
-            </div>
-        </div>
-    
+       
+        {/* <div className='absolute  top-0 -right-4 w-60 h-60 bg-purple-300 opacity-50 z-1 filter blur-3xl rounded-full'></div>
 
+        <div className='absolute bottom-0 -left-4 w-60 h-60 bg-grisly2F5 opacity-50 z-1 filter blur-3xl rounded-full'></div>
+          
+          <img className="absolute content-center -right-10 top-2/4 z-1 w-60 h-60 fiter blur-3xl opacity-50" src={Vector} alt=""/>
+          
+         */}
+        
+
+        
+
+
+          </>
     )
 }
 export default LogInPage;
