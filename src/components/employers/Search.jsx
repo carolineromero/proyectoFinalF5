@@ -49,7 +49,7 @@ const methodGet=async()=>{
 
     <div className="flex justify-center">
         <button className="w-40 h-6 text-1xl flex justify-center items-center bg-moradoFuerteF5  p-5 m-4 rounded-xl border-2 text-white">
-          Crear nuevo 
+          Crear nuevoo 
         </button> 
     </div>
     </div>
