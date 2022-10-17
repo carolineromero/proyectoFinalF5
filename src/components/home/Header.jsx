@@ -1,6 +1,5 @@
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import logoSomosF5 from '../../assets/img/header/somosF5-logoMorado.svg'
 import cerrarIcon from '../../assets/img/header/burgerIcon.png'
 import { Link } from 'react-router-dom'
