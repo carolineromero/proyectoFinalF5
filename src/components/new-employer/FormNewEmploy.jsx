@@ -10,7 +10,7 @@ function FormNewEmploy() {
       <form action="https://formbold.com/s/FORM_ID" method="POST">
       <div className="mb-5">
           <label for="name" className="mb-3 block text-base font-medium text-[#07074D]">
-          Name
+          Nombre
           </label>
           <input
             type="text"
@@ -48,7 +48,7 @@ function FormNewEmploy() {
           <label
             for="dni"
             className="mb-3 block text-base font-medium text-[#07074D]">
-           Dni
+           DNI
           </label>
           <input
            type="number"
@@ -60,7 +60,7 @@ function FormNewEmploy() {
 
       <div className="mb-5">
           <label for="telephone" className="mb-3 block text-base font-medium text-[#07074D]">
-          telephone
+          Telefono
           </label>
           <input
             type="number"

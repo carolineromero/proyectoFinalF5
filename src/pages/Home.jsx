@@ -4,10 +4,10 @@ import Hero from '../components/home/Hero';
 import Main from '../components/home/Main'
 /* import Vector from "../assets/img/background/Vector.png" */
 
+
 function Home() {
   return (
-    <>
-    
+    <>  
   <Header/>
   <Hero/>
   <Main/>
