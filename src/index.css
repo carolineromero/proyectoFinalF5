@@ -3,11 +3,9 @@
 @tailwind utilities;
 
 
-*{
-    margin:0px;
-    box-sizing: none;
-    
+@layer components{
+    .bg-principal{
+        z-index: -1;
+        @apply h-screen absolute overflow-hidden inset-0 bg-grisF5;
+    }
 }
-
-
-

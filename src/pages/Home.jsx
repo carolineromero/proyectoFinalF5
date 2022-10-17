@@ -2,25 +2,32 @@ import React from 'react';
 import Header from '../components/home/Header';
 import Hero from '../components/home/Hero';
 import Main from '../components/home/Main'
-/* import Vector from "../assets/img/background/Vector.png" */
+
+import logoSomosF5 from '../assets/img/header/somosF5-logoMorado.svg'
+import BgMain from '../components/global/BgMain';
+
 
 function Home() {
   return (
-    <>
-    
-  <Header/>
-  <Hero/>
-  <Main/>
+    <div className= 'relative'>
+       <BgMain/>
+        <header className='flex justify-between'>
+          <img src={logoSomosF5} alt="" srcset="" />
+          <button>--8</button>
+        </header>
 
+        <section>
+          <h2>
+            Hola Isabel
+          </h2>
+        
+        </section>
 
-{/*   <div className='absolute  top-0 -right-4 w-60 h-60 bg-purple-300 opacity-50 z-1 filter blur-3xl rounded-full'></div>
+        <main>
+          <input type="text" />
+        </main>
 
-<div className='absolute bottom-0 -left-4 w-60 h-60 bg-grisly2F5 opacity-50 z-1 filter blur-3xl rounded-full'></div>
-  
-  <img className="absolute content-center -right-10 top-2/4 z-1 w-60 h-60 fiter blur-3xl opacity-50" src={Vector} alt=""/>
- */}
-
-    </>
+    </div>
   )
 }
 
