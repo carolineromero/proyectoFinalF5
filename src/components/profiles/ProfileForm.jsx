@@ -3,6 +3,10 @@ import image from '../../assets/img/perfil.png'
 import Vector from '../../assets/img/background/Vector.png'
 
 function ProfileForm() {
+    const user = JSON.parse(localStorage.getItem("loggedUser"))
+    console.log(user)
+
+    
   return (
            <body>
            
@@ -27,12 +31,11 @@ function ProfileForm() {
                                         for="Nombre"
                                         className="block text-sm font-semibold text-gray-800"
                                     >
-                                        Nombre
+                                        Nombre y Apellidos
                                     </label>
-                                    <input
-                                        type="text"
+                                    <p
                                         className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                    />
+                                    >{user.name + " " + user.surname}</p>
                                 </div>
                                 <div className="mb-2">
                                     <label
@@ -41,10 +44,9 @@ function ProfileForm() {
                                     >
                                         DNI
                                     </label>
-                                    <input
-                                        type="numbers"
+                                    <p
                                         className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                    />
+                                    >{user.dni}</p>
                                 </div>
     
                                 <div className="mb-2">
@@ -54,10 +56,9 @@ function ProfileForm() {
                                     >
                                         Telefono
                                     </label>
-                                    <input
-                                        type="numbers"
+                                    <p
                                         className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                    />
+                                    >{user.phone}</p>
                                 </div>
     
                                 <div className="mb-2">
@@ -67,10 +68,9 @@ function ProfileForm() {
                                     >
                                         Email
                                     </label>
-                                    <input
-                                        type="email"
+                                    <p
                                         className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                    />
+                                    >{user.email}</p>
                                 </div>
                                 <div className="mb-2">
                                     <label
@@ -79,10 +79,9 @@ function ProfileForm() {
                                     >
                                         Cargo
                                     </label>
-                                    <input
-                                        type="cargo"
+                                    <p
                                         className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                    />
+                                    >{user.cargo}</p>
                                 </div>
                                 <div className="mb-2">
                                     <label
@@ -91,10 +90,20 @@ function ProfileForm() {
                                     >
                                         Horas Semanales
                                     </label>
-                                    <input
-                                        type="Horas Semanales"
+                                    <p
                                         className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                    />
+                                    >{user.horario}</p>
+                                </div>
+                                <div className="mb-2">
+                                    <label
+                                        for="Horas semanales"
+                                        className="block text-sm font-semibold text-gray-800"
+                                    >
+                                        Función:
+                                    </label>
+                                    <p
+                                        className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                                    >{user.rol}</p>
                                 </div>
                                 
                                 <div className="mt-6">
@@ -109,10 +118,9 @@ function ProfileForm() {
                                     >
                                        Filtro de fichaje
                                     </label>
-                                    <input
-                                        type="Horas Semanales"
+                                    <p
                                         className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                    />
+                                    ></p>
                                 </div>
                                 <div className="mt-6">
                                     <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
