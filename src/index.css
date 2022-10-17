@@ -2,16 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin:0px;
-   
+@layer components{
+    
 }
-body {
-    background-image: url("");
-   
-   
-   }
-   
 
 
 

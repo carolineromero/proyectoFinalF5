@@ -7,9 +7,9 @@ import Vector from '../assets/img/background/Vector.png'
 function LogInPage(){
     return(
         <>
-            <div className="relative w-full max-w-lg"></div>
-            <div className='absolute top-0 -right-4 w-60 h-60 bg-purple-300 filter blur-3xl rounded-full '></div>
-            <img className="absolute content-center -right-10 top-2/4 z-10 w-60 h-60 fiter blur-3xl opacity-75" src={Vector} alt=""/>
+            <div className="relative w-full max-w-lg z-1"></div>
+            <div className='absolute top-0 -right-0 inset-0 w-60 h-60 bg-purple-300 filter blur-3xl rounded-full '></div>
+            <img className="absolute content-center -right-10 top-2/4 z-10  inset-0w-60 h-60 fiter blur-3xl opacity-75" src={Vector} alt=""/>
        
              <div className='absolute bottom-0 -left-4 w-60 h-60 bg-purple-300 filter blur-3xl rounded-full '></div>
              
