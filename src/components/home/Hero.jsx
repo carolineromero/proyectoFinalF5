@@ -8,7 +8,7 @@ function Name() {
       Hola..
     </h4>  
     <h2 className="text-3xl font-bold self-center text-moradoFuerteF5 ">
-    Pepa
+   Isabel
     </h2> 
     </div>
   </>
