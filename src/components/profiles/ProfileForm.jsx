@@ -15,8 +15,8 @@ function ProfileForm() {
         
          <div className='item-center justify-center p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-moradoFuerteF5 '>
         
-        <div className=" w-auto p-6 m-auto bg-white rounded-md ring-2 ring-moradoFuerteF5 max-h-full">
-         <img className="h-48 w-full object-cover md:h-full md:w-48 flex items-center rounded-l" src={image} alt=""/>
+        <div className=" w-auto p-6 m-auto bg-white rounded-md ring-2 ring-moradoFuerteF5">
+         <img className="h-48 w-full object-cover md:h-full md:w-20 flex items-center rounded-l" src={image} alt=""/>
         </div>
         </div>
         <div className="flex min-h-full items-center justify-center ">
