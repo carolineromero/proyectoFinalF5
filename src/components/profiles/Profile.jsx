@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 
 
@@ -22,4 +22,4 @@ function profile() {
   )
 }
 
-export default profile
+export default profile */
