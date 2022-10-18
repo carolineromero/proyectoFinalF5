@@ -1,14 +1,13 @@
 import React from 'react';
 import Header from '../components/home/Header';
-import SearchComponent from '../components/employers/SearchComponent';
+import Search from '../components/employers/Search';
 
 function Workers() {
   return (
     <>
-    <Header/> 
-    <SearchComponent/>
+    <Header/>
+    <Search/>
     </>
   )
 }
-
 export default Workers

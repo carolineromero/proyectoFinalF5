@@ -11,7 +11,11 @@ module.exports = {
         'lilaF5':'#CBBFE8',
         'cianF5':'#33C8CD',
         'rositaF5':'#FED3C0',
-        'grisF5':'#E4D9FF',
+        'grisF5':'#E8D5FF',
+        'grislyF5':'#F6F3FF',
+        'grisly2F5':'#E3E5FF',
+        
+        
       },
       backgroundSize:{
         '50%': '50%',
