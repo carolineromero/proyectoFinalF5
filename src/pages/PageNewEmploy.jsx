@@ -4,7 +4,6 @@ import Header from '../components/home/Header'
 import FormNewEmploy from '../components/new-employer/FormNewEmploy'
 
 
-
 function PageNewEmploy() {
   return (
    <>

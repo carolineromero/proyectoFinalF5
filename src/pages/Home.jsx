@@ -7,7 +7,11 @@ import Main from '../components/home/Main'
 
 
 
-function Home() {
+function Home(props) {
+
+
+
+
   return (
   <>
     <BgMain/>
