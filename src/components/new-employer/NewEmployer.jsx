@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function FormNewEmploy() {
+function NewEmployer() {
   return (
     <> 
 <div className="flex items-center justify-center p-12">
@@ -121,4 +121,4 @@ function FormNewEmploy() {
   )
 }
 
-export default FormNewEmploy
+export default NewEmployer
