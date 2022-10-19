@@ -10,27 +10,17 @@ function LogIn() {
   const [name, setName] = useState("");
   const [cont, setCont] = useState("");
   const [user, setUser] = useState("");
-
-  const [success, setSuccess] = useState(false)
-
-  const navigate = useNavigate()
+  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
-
     event.preventDefault();
-
     methodPost()
   }
-
   const methodPost = async () => {
-
-
-    const params = new URLSearchParams();
+  const params = new URLSearchParams();
     params.append('email', name);
     params.append('password', cont);
-
-
-
 
     await axios.post("http://localhost/proyectofinalBack/passwords.php", params)
       .then(response => {
@@ -55,8 +45,6 @@ function LogIn() {
 
 
   return (
-
-
 
     <div className="relative rounded-3xl flex items-center mt-44 bg-white z-40 justify-center backdrop-opacity-60 p-12 mx-10">
 
@@ -97,11 +85,6 @@ function LogIn() {
         </form>
       </div>
     </div>
-
-
-
-
-
   )
 }
 

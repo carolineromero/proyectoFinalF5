@@ -20,10 +20,7 @@ export default function Example() {
       setUserRights(false)
     }
   })
-
-
-
-
+  
   return (
     <div className="m-0 flex justify-between bg-transparent p-4 md:bg-slate-100 ">
       <img src={logoSomosF5} alt="logo F5" className='w-18' />

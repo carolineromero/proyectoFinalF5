@@ -28,9 +28,6 @@ function Hero() {
           {user.name}
         </h2>
       </div>
-
-
-      
     </>
   )
 }

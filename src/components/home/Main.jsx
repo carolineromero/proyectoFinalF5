@@ -1,15 +1,8 @@
-import { MaterialTailwindTheme } from '@material-tailwind/react'
 import React, { useState } from 'react'
 import IconEdit from '../../assets/img/header/editIcon.png'
-import { Link } from 'react-router-dom'
-
 
 
 function Main() {
-
-
-
-
 
   var curr = new Date; // get current date
   var first = curr.getDate(); // First day is the day of the month - the day of the week
@@ -18,14 +11,8 @@ function Main() {
   var firstday = new Date(curr.setDate(first)).toLocaleDateString('es', { day: "numeric" })
   var lastday = new Date(curr.setDate(last)).toLocaleDateString('es', { month: "long", day: "numeric" })
 
-
-
-
-
   //fecha actual
   const fechaActual = new Date().toLocaleDateString('es', { year: "numeric", month: "long", day: "numeric" })
-
-
 
   //entrada
   const [showEntrada, setShowEntrada] = useState(false);
@@ -47,15 +34,10 @@ function Main() {
 
   return (
     <>
-
-
       <div className='flex justify-center'>
         <h4 className="text-1xl font-bold flex self-center m-10 text-moradoFuerteF5">
           Semana {firstday + " - " + lastday}
         </h4>
-
-
-
       </div>
 
       <div className='flex justify-center m-2 text-moradoFuerteF5'>
