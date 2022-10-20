@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from '../../assets/img/header/somosF5-logoMorado.svg'
 
 
 /* import { useHistory } from 'react-router-dom' */
@@ -57,10 +58,16 @@ function LogIn() {
   return (
 
 
+<div className='flex-col  '>
+      <div  className='flex justify-center items-center mt-24 sm:mt-10 '>
+        <img src={logo} alt="logo" className='w-40  sm:w-80' ></img>
+      </div>
+              
 
-    <div className="relative rounded-3xl flex items-center mt-44 bg-white z-40 justify-center backdrop-opacity-60 p-12 mx-10">
+    <div className=" relative rounded-3xl flex items-center mt-10 bg-white z-40 justify-center backdrop-opacity-60 p-12 mx-10 sm:mx-80  ">
 
-      <div className=" mx-auto w-full max-w-[550px]">
+
+      <div className=" mx-auto w-full max-w-[400px]">
         <form onSubmit={handleSubmit} /* action="http://localhost/proyectofinalBack/passwords.php" method="POST" */ >
           <div className="mb-5">
             <label for="email" className="mb-3 block text-base font-medium text-[#07074D]">
@@ -99,7 +106,7 @@ function LogIn() {
     </div>
 
 
-
+    </div>
 
 
   )
