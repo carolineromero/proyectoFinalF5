@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Button } from '@material-tailwind/react';
 
 
 const Search = () => {
@@ -41,24 +42,19 @@ const Search = () => {
   return (
     <>
 
-      <div className="flex">
-        <form className='text-slate-100 '>
-          <h2 className="relative flex justify-center h-10 text-moradoFuerteF5">
-            <input value={search} onChange={searcher} type="search" id="default-search" className="bg-grisF5 rounded-xl flex content-center" fill=" moradoFuerteF5 " required>
-            </input>
-          </h2>
-        </form>
+<div className= 'flex justify-center grid-cols-2 mx-6'>
+     <input value={search} onChange={searcher} type="search" id="default-search" className="w-60 h-6 flex justify-center items-center bg-grisF5 p-5 m-2 rounded-md border-2 text-white" fill=" moradoFuerteF5 " required>
+     </input>
 
-        <div className="flex justify-center">
-          <button className="w-40 h-6 text-1xl flex justify-center items-center bg-moradoFuerteF5  p-5 m-4 rounded-xl border-2 text-white">
-            Crear nuevo
-          </button>
-        </div>
-      </div>
+  <Button className='w-30 h-6 flex justify-center items-center bg-moradoFuerteF5 p-5 m-2 rounded-md border-2 text-white'>
+     Crear nuevo
+  </Button>
+</div>
 
+     
       {results.map((user) => (
 
-        <div class="mx-5 my-2 grid-cols-5 grid-row-2 rounded-lg border-2 border-b-4 border-l-4 border-moradoFuerteF5 px-4 shadow-xl">
+        <div class="mx-4 my-2 grid-cols-5 grid-row-2 rounded-lg border-2 border-b-4 border-l-4 border-moradoFuerteF5 px-4 shadow-xl bg-white">
           <div class="flex h-16 items-center justify-between">
             <a href="http://localhost:3000/profile"><img alt="photo" class="w-10 rounded-full" src={user.image} /></a>
             <div class="ml-2">
