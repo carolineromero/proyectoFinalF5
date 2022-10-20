@@ -1,15 +1,24 @@
 import React from 'react';
-import Main from '../components/home/Main';
+import BgMain from '../components/global/BgMain';
 import Header from '../components/home/Header';
-import Hero from '../components/home/Hero'
+import Hero from '../components/home/Hero';
+import Main from '../components/home/Main'
 
-function Home() {
+
+
+
+function Home(props) {
+
+
+
+
   return (
-    <>  
-  <Header/>
-  <Hero/>
-  <Main/>
-    </>
+  <>
+    <BgMain/>
+    <Header/>
+    <Hero/>
+    <Main/>
+  </> 
   )
 }
 

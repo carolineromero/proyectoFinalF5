@@ -1,16 +1,16 @@
 import React from 'react';
+import BgMain from '../components/global/BgMain';
 import Header from '../components/home/Header';
-import Search from '../components/employers/Search';
-import SearchComponent from '../components/employers/SearchComponent';
+import Search from '../components/search/Search';
+
 
 function Workers() {
   return (
     <>
-    <Header/> 
-    <SearchComponent/>
+    <BgMain/>
+    <Header/>
     <Search/>
     </>
   )
 }
-
 export default Workers
