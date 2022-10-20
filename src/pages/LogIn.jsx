@@ -4,7 +4,7 @@ import BgMain from '../components/global/BgMain';
 import LogIn from "../components/login/LogIn";
 
 
-function LogInPage(){
+function Login(){
   return(
     <>
       <BgMain/>
@@ -12,4 +12,4 @@ function LogInPage(){
     </>
     )
 }
-export default LogInPage;
+export default Login;

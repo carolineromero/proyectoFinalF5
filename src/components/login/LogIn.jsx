@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 /* import { useHistory } from 'react-router-dom' */
 
-function LogIn() {
+function Login() {
   const [name, setName] = useState("");
   const [cont, setCont] = useState("");
   const [user, setUser] = useState("");
@@ -22,13 +22,13 @@ function LogIn() {
     params.append('email', name);
     params.append('password', cont);
 
-    await axios.post("http://localhost/proyectofinalBack/passwords.php", params)
+    await axios.post("https://jsonplaceholder.typicode.com/users", params)
       .then(response => {
         console.log(response.data, "resss")
         localStorage.setItem("loggedUser", JSON.stringify(response.data))
         setUser(response.data);
         setSuccess(true)
-        if (response.data.id != undefined) {
+        if (response.data.id !== undefined) {
           {/* <Link to={'/home'}/>; */ }
           navigate("/home", {
             "id": response.data.id
@@ -89,6 +89,6 @@ function LogIn() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<LogIn />);
+root.render(<Login />);
 
-export default LogIn;
+export default Login;

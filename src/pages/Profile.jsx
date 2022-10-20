@@ -1,7 +1,7 @@
 import React from 'react';
 import BgMain from '../components/global/BgMain';
 import Header from '../components/home/Header';
-import ProfileForm from '../components/profiles/ProfileForm';
+import ProfileForm from '../components/profil/ProfileForm';
 
 function Profile() {
   return (

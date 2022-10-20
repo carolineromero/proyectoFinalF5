@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-function FormNewEmploy() {
+function NewEmployer() {
   return (
     <> 
 <div className="flex items-center justify-center p-12">
 
     <div className="mx-auto w-full max-w-[550px]">
-      <form action="https://formbold.com/s/FORM_ID" method="POST">
+      <form action="">
       <div className="mb-5">
           <label for="name" className="mb-3 block text-base font-medium text-[#07074D]">
           Nombre
@@ -121,4 +121,4 @@ function FormNewEmploy() {
   )
 }
 
-export default FormNewEmploy
+export default NewEmployer

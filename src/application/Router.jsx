@@ -6,7 +6,6 @@ import Workers from '../pages/Workers'
 import Profile from '../pages/Profile'
 import NewEmploy from '../pages/NewEmploy'
 
-
 function Router() {
   return (
     <BrowserRouter>

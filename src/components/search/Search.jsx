@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const SearchCompenent = () => {
+
+const Search = () => {
   //setear los hooks useState
   const [users, setUsers] = useState([])
   const [search, setSearch] = useState("")
   //función para traer los datos de la API
+
   const [adminRights, setAdminRights] = useState(false)
 
   const methodGet = async () => {
-    await axios.get("http://localhost/proyectofinalBack/trabajadores.php")
+    await axios.get("https://jsonplaceholder.typicode.com/users")
       .then(response => {
-        if (response.data.rol != "admin") { }
+        if (response.data.rol !== "admin") { }
         setUsers(response.data);
       }).catch(error => {
         console.log(error);
@@ -98,4 +100,4 @@ const SearchCompenent = () => {
     </>
   )
 }
-export default SearchCompenent
+export default Search

@@ -1,17 +1,17 @@
 import React from 'react'
 import BgMain from '../components/global/BgMain';
-import Header from '../components/home/Header'
-import FormNewEmploy from '../components/new-employer/FormNewEmploy'
+import Header from '../components/home/Header';
+import NewEmployer from '../components/new-employer/NewEmployer'
 
 
-function PageNewEmploy() {
+function NewEmploy() {
   return (
    <>
     <BgMain/>
     <Header/>
-    <FormNewEmploy/>
+    <NewEmployer/>
    </>
   )
 }
 
-export default PageNewEmploy
+export default NewEmploy
