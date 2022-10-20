@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../../assets/img/perfil.png'
+
 
 
         function ProfileForm() {
