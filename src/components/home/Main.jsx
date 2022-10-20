@@ -67,14 +67,14 @@ function Main() {
         {fechaActual}
       </div>
 
-      <div className="flex justify-center">
-        <button onClick={() => showTimeEntrada()} className="text-1xl font-bold flex self-center bg-cianF5 w-max p-5 m-4 rounded-2xl text-white">
+     {/* <div className="flex justify-center">
+         <button onClick={() => showTimeEntrada()} className="text-1xl font-bold flex self-center bg-cianF5 w-max p-5 m-4 rounded-2xl text-white">
           Registrar entrada
-        </button>
+        </button> 
         <button onClick={() => showTimeSalida()} className="text-1xl font-bold flex self-center bg-moradoFuerteF5 w-max p-5 m-4 rounded-2xl text-white">
           Registrar salida
-        </button>
-      </div>
+        </button> 
+      </div>*/}
       <div className="flex justify-center">
         <div className="flex flex-col justify-between   bg-violet-300 p-5 rounded-lg w-200">
           <div className="flex justify-around ">
@@ -117,6 +117,7 @@ function Main() {
               alt="icono editar"
               className="w-7 h-7 flex self-center "
             />
+            
           </div>
         </div>
         </div>
