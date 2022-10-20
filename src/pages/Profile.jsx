@@ -1,6 +1,7 @@
-import React from 'react'
-import ProfileForm from '../components/profiles/ProfileForm'
-import Header from '../components/home/Header'
+import React from 'react';
+import BgMain from '../components/global/BgMain';
+import Header from '../components/home/Header';
+import ProfileForm from '../components/profiles/ProfileForm';
 
 
 
@@ -8,12 +9,9 @@ import Header from '../components/home/Header'
 function Profile() {
   return (
     <>
+    <BgMain/>
     <Header/>
-    
     <ProfileForm/> 
-    
-    
-
     </>
   ) 
 }
