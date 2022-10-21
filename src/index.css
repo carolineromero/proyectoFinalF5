@@ -15,3 +15,47 @@
         @apply h-screen fixed overflow-hidden inset-0 bg-grisF5;
     }
 }
+
+
+
+.toggle--button{
+    width: 280px;
+    height: 75px;
+    margin-top: 5%;
+    margin-bottom:5%;
+    border: none;
+    font-size: 18px;
+    background-color:#33C8CD;
+    color: white;
+    cursor: pointer;
+    box-shadow: #009FA5 5px 5px ;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    
+  }
+
+  .toggle--close{
+    background-color: #FF4700;
+    box-shadow: #B43200 5px 5px;
+  };
+
+
+  
+  /* Cuando la pantalla es menor a 900px  (tablets y teléfonos inteligentes)*/
+@media only screen and (max-width : 900px) {
+   
+    
+    .toggle--button{
+        width: 150px;
+        height: 75px;
+        margin-top: 5%;
+        margin-bottom:5%;
+        border: none;
+        font-size: 18px;
+        background-color: #9dff00;
+      
+        
+        }
+    }

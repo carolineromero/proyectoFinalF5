@@ -45,20 +45,29 @@ function Main() {
     setShowSalida(true)
   }
 
+ // boton fichar
+
+ const [state, setState] = useState(false);
+ 
+ const toggle=()=>{
+  setState(!state);
+ }
+
   return (
     <>
 
+<div className=" lg:  p-5 rounded-3xl sm: bg-white 0 w-9/12 mx-8">
 
       <div className='flex justify-center'>
-        <h4 className="text-1xl font-bold flex self-center m-10 text-moradoFuerteF5">
+        <h4 className="text-1xl fixed font-bold flex self-center m-10 text-moradoFuerteF5">
           Semana {firstday + " - " + lastday}
         </h4>
 
       </div>
 
-<div className="relative mx-6 lg:mx-20 ">
 
-      <div className=" absolute bg-white m-10 flex self-center flex-col justify-center p-5 rounded-lg w-9/12">
+
+      
         
       <div className='flex justify-center m-2 text-moradoFuerteF5'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 mr-2 text-moradoFuerteF5">
@@ -67,18 +76,30 @@ function Main() {
         {fechaActual}
       </div>
 
-     {/* <div className="flex justify-center">
+     
+
+
+
+{/* <div className="flex justify-center">
          <button onClick={() => showTimeEntrada()} className="text-1xl font-bold flex self-center bg-cianF5 w-max p-5 m-4 rounded-2xl text-white">
           Registrar entrada
         </button> 
-        <button onClick={() => showTimeSalida()} className="text-1xl font-bold flex self-center bg-moradoFuerteF5 w-max p-5 m-4 rounded-2xl text-white">
+
+        <button onClick={() => showTimeSalida()}  className="text-1xl font-bold flex self-center bg-naranjaF5 w-max p-5 m-4 rounded-2xl text-white">
           Registrar salida
         </button> 
-      </div>*/}
+      </div> */}
+      
+
+<button onClick={toggle} /* onClick={() => showTimeSalida()} */ className={'toggle--button ' + (state ? 'toggle--close':'')} >
+  {state ? 'Registrar salida' : 'Registrar entrada'}
+</button>
+
+
       <div className="flex justify-center">
-        <div className="flex flex-col justify-between   bg-violet-300 p-5 rounded-lg w-200">
+        <div className="flex flex-col justify-between  bg-yellow-200 p-2 rounded-lg w-400">
           <div className="flex justify-around ">
-            <div className="bg-green-400 w-14 h-14 rounded-full ml-0.5"> </div>
+            <div className="bg-green-400 w-full h-14 rounded-full  "> </div>
             {showEntrada ? (
               <h2 className="flex self-center text-1xl text-black font-bold ">
                 {" "}
@@ -122,7 +143,7 @@ function Main() {
         </div>
         </div>
       </div>
-      </div>
+      
     </>
   );
 }
