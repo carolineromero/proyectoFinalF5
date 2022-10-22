@@ -12,14 +12,14 @@ function classNames(...classes) {
 export default function Example() {
   const [userRights, setUserRights] = useState(false)
 
-  useEffect(() => {
-    const userAdmin = JSON.parse(localStorage.getItem("loggedUser"))
-    if (userAdmin.rol === "admin") {
-      setUserRights(true)
-    } else {
-      setUserRights(false)
-    }
-  })
+  // useEffect(() => {
+  //   const userAdmin = JSON.parse(localStorage.getItem("loggedUser"))
+  //   if (userAdmin.rol === "admin") {
+  //     setUserRights(true)
+  //   } else {
+  //     setUserRights(false)
+  //   }
+  // })
 
 
 

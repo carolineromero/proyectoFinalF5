@@ -35,9 +35,9 @@ const Search = () => {
     )
    }
 
-  useEffect( ()=> {
-  methodGet()
-  }, [])
+  // useEffect( ()=> {
+  // methodGet()
+  // }, [])
 
   //renderizamos la vista
   return (
