@@ -8,19 +8,23 @@ import axios from "axios";
 import { render } from "@testing-library/react";
 
 function Home(props) {
-  useEffect(() => {
-    userLoggedIn();
-  }, []);
-
   const userLoggedIn = () => {
     axios
       .get(
         "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
       )
       .then((res) => {
-        console.log(res.data);
+        const test = Object.keys(res.data);
+        const diffears = test.map((a) => {
+          if (a.length > 10) {
+            console.log(a);
+          }
+          return a;
+        });
       });
   };
+
+  userLoggedIn();
 
   const test = "1";
   if (test === "1") {

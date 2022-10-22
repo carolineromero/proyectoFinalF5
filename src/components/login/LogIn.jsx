@@ -28,10 +28,9 @@ function LogIn() {
           if (user != null) {
             if (user.email === email && user.password === password) {
               setSuccess(true);
-
               userLogged();
             } else {
-              setSuccess(false);
+              return;
             }
           }
         });
@@ -40,6 +39,7 @@ function LogIn() {
 
   const userLogged = () => {
     const test = { test: "1" };
+
     axios
       .post(
         "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json",
@@ -47,6 +47,7 @@ function LogIn() {
       )
       .then((res) => console.log(res));
   };
+
   console.log(success);
   return (
     <div className="flex-col  ">
@@ -54,6 +55,7 @@ function LogIn() {
         <img src={logo} alt="logo" className="w-40  sm:w-80"></img>
       </div>
       {/* if success is true will go to home */}
+      {console.log(success, "true?")}
       {success && <Navigate to="/home" replace={true} />}
 
       <div className=" relative rounded-3xl flex items-center mt-10 bg-white z-40 justify-center backdrop-opacity-60 p-12 mx-10 sm:mx-80  ">
