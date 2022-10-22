@@ -38,7 +38,7 @@ function LogIn() {
   };
 
   const userLogged = () => {
-    const test = { test: "1" };
+    const test = { test: "1", user: email };
 
     axios
       .post(

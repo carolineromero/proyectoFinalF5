@@ -11,7 +11,7 @@ const Search = () => {
   //función para traer los datos de la API
 
   const methodGet=async()=>{
-    await axios.get("https://jsonplaceholder.typicode.com/users")
+    await axios.get("https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json")
     .then(response=>{
       setUsers(response.data);
     }).catch(error=>{

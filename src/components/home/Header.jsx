@@ -1,32 +1,31 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import logoSomosF5 from '../../assets/img/header/somosF5-logoMorado.svg'
-import { useState, useEffect} from 'react'
-import cerrarIcon from '../../assets/img/header/burgerIcon.png'
-import { Link } from 'react-router-dom'
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import logoSomosF5 from "../../assets/img/header/somosF5-logoMorado.svg";
+import { useState, useEffect } from "react";
+import cerrarIcon from "../../assets/img/header/burgerIcon.png";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
-  const [userRights, setUserRights] = useState(false)
+  const [userRights, setUserRights] = useState(false);
 
-  // useEffect(() => {
-  //   const userAdmin = JSON.parse(localStorage.getItem("loggedUser"))
-  //   if (userAdmin.rol === "admin") {
-  //     setUserRights(true)
-  //   } else {
-  //     setUserRights(false)
-  //   }
-  // })
+  const userAdmin = () => {
+    axios
+      .get(
+        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+      )
+      .then((res) => console.log(res.data));
+  };
 
-
-
+  userAdmin();
 
   return (
     <div className="m-0 flex justify-between bg-transparent p-4 md:bg-slate-100 ">
-      <img src={logoSomosF5} alt="logo F5" className='w-18' />
+      <img src={logoSomosF5} alt="logo F5" className="w-18" />
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 bg-grisF">
@@ -48,35 +47,47 @@ export default function Example() {
             <div className="py-1">
               <Menu.Item>
                 {({ active }) => (
-
-                  <Link to='/profile'
+                  <Link
+                    to="/profile"
                     className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block px-4 py-2 text-sm'
-                    )}>Perfil</Link>
-
-
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block px-4 py-2 text-sm"
+                    )}
+                  >
+                    Perfil
+                  </Link>
                 )}
               </Menu.Item>
-              {userRights ? <Menu.Item>
-                {({ active }) => (
-                  <Link to='/workers'
-                    className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block px-4 py-2 text-sm'
-                    )}>Trabajadores</Link>
-                )}
-              </Menu.Item> : ""}
-
-
-              <form method="POST" action="#">
+              {userRights ? (
                 <Menu.Item>
                   {({ active }) => (
-                    <Link to='/'
+                    <Link
+                      to="/workers"
                       className={classNames(
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'block px-4 py-2 text-sm'
-                      )}>Sign Out</Link>
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Trabajadores
+                    </Link>
+                  )}
+                </Menu.Item>
+              ) : (
+                ""
+              )}
+
+              <form>
+                <Menu.Item>
+                  {({ active }) => (
+                    <Link
+                      to="/"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Sign Out
+                    </Link>
                   )}
                 </Menu.Item>
               </form>
@@ -85,5 +96,5 @@ export default function Example() {
         </Transition>
       </Menu>
     </div>
-  )
+  );
 }

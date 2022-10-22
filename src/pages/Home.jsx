@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import BgMain from "../components/global/BgMain";
 import Header from "../components/home/Header";
 import Hero from "../components/home/Hero";
@@ -8,6 +8,7 @@ import axios from "axios";
 import { render } from "@testing-library/react";
 
 function Home(props) {
+  const [success, setSuccess] = useState(false);
   const userLoggedIn = () => {
     axios
       .get(
@@ -17,7 +18,7 @@ function Home(props) {
         const test = Object.keys(res.data);
         const diffears = test.map((a) => {
           if (a.length > 10) {
-            console.log(a);
+            setSuccess(true);
           }
           return a;
         });
@@ -26,15 +27,13 @@ function Home(props) {
 
   userLoggedIn();
 
-  const test = "1";
-  if (test === "1") {
+  if (success) {
     return (
       <>
         <BgMain />
         <Header />
         <Hero />
         <Main />
-        <LogIn />
       </>
     );
   } else {
