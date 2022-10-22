@@ -34,19 +34,19 @@ const Search = () => {
       data.surname.toLowerCase().includes(search.toLocaleLowerCase())
 
     )
-
   }
+  
   useEffect(() => {
     methodGet()
   }, [])
   return (
     <>
-
-<div className= 'flex justify-center grid-cols-2 mx-6'>
-     <input value={search} onChange={searcher} type="search" id="default-search" className="w-60 h-6 flex justify-center items-center bg-grisF5 p-5 m-2 rounded-md border-2 text-white" fill=" moradoFuerteF5 " required>
+<div className= 'sm lg'>
+<div className= 'flex justify-center grid-cols-2 mx-6 sm xl '>
+     <input value={search} onChange={searcher} type="search" id="default-search" className="w-60 h-6 flex justify-center items-center bg-grisF5 p-5 m-2 rounded-xl border-2 text-white sm lg" fill=" moradoFuerteF5 " required>
      </input>
 
-  <Button className='w-30 h-6 flex justify-center items-center bg-moradoFuerteF5 p-5 m-2 rounded-md border-2 text-white'>
+  <Button className='w-30 h-6 flex justify-center items-center bg-moradoFuerteF5 p-5 m-2 rounded-xl border-2 text-white'>
      Crear nuevo
   </Button>
 </div>
@@ -92,7 +92,7 @@ const Search = () => {
         </div>
 
       ))}
-
+ </div>
     </>
   )
 }
