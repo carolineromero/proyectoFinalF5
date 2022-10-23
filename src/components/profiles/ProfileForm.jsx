@@ -146,8 +146,19 @@ import image from "../../assets/img/perfil.png";
     function ProfileForm() { */
 
 function ProfileForm() {
-  // const user = JSON.parse(localStorage.getItem("loggedUser"));
-  // console.log(user);
+  //Para ocultar botón de editar, para referencias mirar el header
+
+  //const [userRights, setUserRights] = useState(false);
+
+  // const userAdmin = () => {
+  //   axios
+  //     .get(
+  //       "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+  //     )
+  //     .then((res) => console.log(res.data));
+  // };
+
+  // userAdmin();
 
   return (
     <>

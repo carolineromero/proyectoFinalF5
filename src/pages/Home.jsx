@@ -37,7 +37,8 @@ function Home(props) {
       </>
     );
   } else {
-    <LogIn />;
+    return(
+    <LogIn />);
   }
 }
 
