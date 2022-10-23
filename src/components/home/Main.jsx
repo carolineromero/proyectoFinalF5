@@ -1,4 +1,5 @@
 import { MaterialTailwindTheme } from '@material-tailwind/react'
+import "../../index.css"
 import React, { useState } from 'react'
 import IconEdit from '../../assets/img/header/editIcon.png'
 import { Link } from 'react-router-dom'
@@ -44,6 +45,14 @@ function Main() {
   const showTimeSalida = () => {
     setShowSalida(true)
   }
+  
+
+
+//para que desaparezca boton entrada al clicar
+const [show, setShow] = useState(true);
+
+
+
 
   return (
     <>
@@ -66,10 +75,10 @@ function Main() {
       </div>
 
       <div className="flex justify-center">
-        <button onClick={() => showTimeEntrada()} className="text-1xl font-bold flex self-center bg-cianF5 w-max p-5 m-4 rounded-2xl text-white">
+        <button style={{ display: show ? "block" : "none" }} onClick={() => {showTimeEntrada(); setShow((s) => !s)}} id="boton-fichaje-entrada" className='toggle--button absolute' >
           Registrar entrada
         </button>
-        <button onClick={() => showTimeSalida()} className="text-1xl font-bold flex self-center bg-moradoFuerteF5 w-max p-5 m-4 rounded-2xl text-white">
+        <button  onClick={() => {showTimeSalida()}} className='toggle--close' >
           Registrar salida
         </button>
       </div>
