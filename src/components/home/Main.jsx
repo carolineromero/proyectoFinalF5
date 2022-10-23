@@ -90,10 +90,10 @@ return (
      </div>
 
      <div className="flex justify-center">
-        <button style={{ display: show ? "block" : "none" }} onClick={() => {showTimeEntrada(); setShow((s) => !s)}} id="boton-fichaje-entrada" className='toggle--button absolute' >
+        <button style={{ display: show ? "block" : "none" }} onClick={() => {showTimeEntrada(); setShow((s) => !s)}} id="boton-fichaje-entrada" className='toggle--button' >
           Registrar entrada
         </button>
-        <button  onClick={() => {showTimeSalida()}} className='toggle--close' >
+        <button  style={{ display: show ? "none" : "block" }} onClick={() => {showTimeSalida()}} className='toggle--close' >
           Registrar salida
         </button>
       </div>

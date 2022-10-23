@@ -33,11 +33,9 @@ function Login() {
           {/* <Link to={'/home'}/>; */ }
           navigate("/home", {
             "id": response.data.id
-          })
-          alert(response.data.name);
-        } else {
+          }) 
           alert('error de contraseña'); 
-        }
+        } 
       })
   }
 
