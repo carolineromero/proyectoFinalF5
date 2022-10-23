@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import axios from 'axios';
-import {useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/img/header/somosF5-logoMorado.svg'
 
 
@@ -34,18 +34,16 @@ function Login() {
           navigate("/home", {
             "id": response.data.id
           })
+          alert(response.data.name);
+        } else {
+          alert('error de contraseña'); 
         }
-        alert(response.data.name)
-      }).catch(error => {
-        setSuccess(false)
-        console.log(error);
       })
   }
 
 
-  return (
-
-
+return (
+<>  
 <div className='flex-col  '>
       <div  className='flex justify-center items-center mt-24 sm:mt-10 '>
         <img src={logo} alt="logo" className='w-40  sm:w-80' ></img>
@@ -88,7 +86,7 @@ function Login() {
        </div>
       </div>
     </div>
-   
+</>  
   );
 }
 

@@ -1,19 +1,19 @@
-import { MaterialTailwindTheme} from '@material-tailwind/react'
+import { MaterialTailwindTheme } from '@material-tailwind/react'
+import "../../index.css"
 import React, { useState } from 'react'
 import IconEdit from '../../assets/img/header/editIcon.png'
+import { Link } from 'react-router-dom'
 
 function Main() {
-
   var curr = new Date; // get current date
   var first = curr.getDate(); // First day is the day of the month - the day of the week
   var last = first + 6; // last day is the first day + 6
 
   var firstday = new Date(curr.setDate(first)).toLocaleDateString('es', { day: "numeric" })
-  var lastday = new Date(curr.setDate(last)).toLocaleDateString('es', { month: "long", day: "numeric"})
+  var lastday = new Date(curr.setDate(last)).toLocaleDateString('es', { month: "long", day: "numeric" })
 
   //fecha actual
   const fechaActual = new Date().toLocaleDateString('es', { year: "numeric", month: "long", day: "numeric" })
-
 
   //entrada
   const [showEntrada, setShowEntrada] = useState(false);
@@ -27,25 +27,24 @@ function Main() {
   const showTimeEntrada = () => {
     setShowEntrada(true)
   }
- //salida
+  //salida
   const [showSalida, setShowSalida] = useState(false);
   const showTimeSalida = () => {
     setShowSalida(true)
   }
- // boton fichar
- const [state, setState] = useState(false);
- const toggle=()=>{
-  setState(!state);
- }
-  const [show, setShow] = useState(true);
+  
 
-  return (
-    <>
-      <div className='flex justify-center'>
-        <h4 className="text-1xl font-bold flex self-center mt-8 text-moradoFuerteF5">
-          Semana {firstday + " - " + lastday}
-        </h4>
-      </div>
+//para que desaparezca boton entrada al clicar
+const [show, setShow] = useState(true);
+
+
+return (
+<>
+  <div className='flex justify-center'>
+    <h4 className="text-1xl font-bold flex self-center mt-8 text-moradoFuerteF5">
+       Semana {firstday + " - " + lastday}
+    </h4>
+  </div>
    
       <div className=" w-9/12 md:w-1/3 lg:w-1/5 mx-auto mt-4 items-center ">
         <div className="bg-gray-200 h-3 flex items-center ">
@@ -90,30 +89,16 @@ function Main() {
       {fechaActual}
      </div>
 
-<div className="flex justify-center ">
-
-     <button onClick={toggle} /* onClick={() => showTimeSalida()} */ className={'toggle--button ' + (state ? 'toggle--close':'')} >
-  {state ? 'Registrar salida' : 'Registrar entrada'}
-</button>
-
-      
-
-      <button onClick={() => showTimeEntrada() + setShow(!show)} className="text-1xl font-bold flex self-center bg-cianF5 w-max p-5 m-4 rounded-2xl text-white">
-      {show ? 'Registar entrada' : 'Registrar Salida'}  
-      </button>
-      <button onClick={() => showTimeSalida() + setShow(show)} className="text-1xl font-bold flex self-center bg-naranjaF5 w-max p-5 m-4 rounded-2xl text-white"> 
-      </button>
-     
-       { /*<button 
-        {show ? ' Registrar entrada' : 'Registrar salida'}
+     <div className="flex justify-center">
+        <button style={{ display: show ? "block" : "none" }} onClick={() => {showTimeEntrada(); setShow((s) => !s)}} id="boton-fichaje-entrada" className='toggle--button absolute' >
+          Registrar entrada
         </button>
-   
-        <button onClick={() => showTimeSalida() +setShow(show)} className="text-1xl font-bold flex self-center bg-naranjaF5 w-max p-5 m-4 rounded-2xl text-white">
-       
-       </button>*/} 
+        <button  onClick={() => {showTimeSalida()}} className='toggle--close' >
+          Registrar salida
+        </button>
       </div>
 
-      <div className="flex justify-center max-w-[300 px] mb-4">
+<div className="flex justify-center max-w-[300 px] mb-4">
         <div className="flex-col justify-between bg-violet-300 p-6 rounded-2xl ">
           <div className="flex grid-4 gap-2 ">
             <div className="bg-cianF5 w-14 h-14 rounded-full ml-0.5"> </div>
