@@ -6,11 +6,14 @@ import Home from "../../pages/Home";
 import logo from "../../assets/img/header/somosF5-logoMorado.svg";
 
 import { Navigate } from "react-router-dom";
+import { getRoles } from "@testing-library/react";
 
 function LogIn() {
   // 1. recoger email y password que escribe el usuario
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rol, setRol] = useState("");
+  
   //resultado data obtenida
   const [success, setSuccess] = useState(false);
 
@@ -38,7 +41,7 @@ function LogIn() {
   };
 
   const userLogged = () => {
-    const test = { test: "1", user: email };
+    const test = { test: "1", user: email, user: rol };
 
     axios
       .post(

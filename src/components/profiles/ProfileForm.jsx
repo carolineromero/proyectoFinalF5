@@ -1,5 +1,7 @@
 import React from "react";
 import image from "../../assets/img/perfil.png";
+import axios from 'axios';
+import { useState } from 'react';
 
 /* function ProfileForm() {
     const user = JSON.parse(localStorage.getItem("loggedUser"))
@@ -159,7 +161,17 @@ function ProfileForm() {
   // };
 
   // userAdmin();
+  const [userRights, setUserRights] = useState(false);
 
+  const userAdmin = () => {
+    axios
+      .get(
+        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+      )
+      .then((res) => console.log(res.data));
+  };
+
+  userAdmin();
   return (
     <>
       <div className="flex justify-center bg-white min-h-min">
@@ -319,14 +331,26 @@ function ProfileForm() {
                       </div>
                     </div>
                   </div>
+                  
+                  {userRights ? (
                   <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                     <button
                       type="submit"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-cianF5 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-cianF5 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mr-4"
                     >
-                      Guardar
+                      Editar
+                    </button>
+                    <button
+                      type="submit"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-moradoFuerteF5 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    >
+                     Eliminar
                     </button>
                   </div>
+                     ) : (
+                      ""
+                    )}
+      
                 </div>
               </form>
             </div>

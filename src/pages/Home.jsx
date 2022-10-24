@@ -25,6 +25,7 @@ function Home(props) {
       });
   };
 
+  
   userLoggedIn();
 
   if (success) {
