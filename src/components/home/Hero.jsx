@@ -5,17 +5,18 @@ function Hero() {
   console.log(user)
 
   return (
-    <>
-    <div className="flex justify-center flex-col h-8 mt-4">
+
+  <>
+    <div className="flex justify-center flex-col md ">
       <h4 className="text-1xl font-bold self-center text-moradoFuerteF5">
-        👋 Hola..
+      👋 Hola..
       </h4>  
-    
-      <h2 className="text-3xl font-bold self-center text-moradoFuerteF5 mt-2">
-        Isabel
-      </h2>
+    <div className='flex justify-center flex-col '>
+      <h2 className="text-3xl font-bold mb-16 self-center text-moradoFuerteF5">
+      {user.name} </h2>
     </div>
-    </>
+    </div>
+  </>
   )
 }
 

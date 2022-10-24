@@ -1,5 +1,4 @@
 import React from 'react'
-import iconProfile from '../../assets/img/new-profile/icon-profile.png'
 
 function NewEmployer() {
 return (
@@ -15,7 +14,7 @@ return (
        <div>
        <div className="mt-1 flex items-center">
        <span className="inline-block  h-20 w-20 overflow-hidden rounded-full bg-gray-100">
-       <img className="h-full w-full object-cover flex justify-center" viewBox="0 0 24 24 " src={iconProfile} alt="perfil imagen"/>
+       <img className="h-full w-full object-cover flex justify-center" viewBox="0 0 24 24 " src='' alt="perfil imagen"/>
        </span>
       </div>
       </div>
