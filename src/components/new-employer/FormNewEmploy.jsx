@@ -360,8 +360,26 @@ function FormNewEmploy() {
                             className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-none shadow-sm"
                           />
                         </div>
+                        <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                          <label
+                            htmlFor="name"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            Jornada laboral
+                          </label>
+                          <input
+                          onChange={(e) => setPassword(e.target.value)}
+                            type="number "
+                            name="horario"
+                            id="horario"
+                            placeholder=""
+                            className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-none shadow-sm"
+                          />
+                        </div>
+
                       </div>
                     </div>
+                    
 
                     {/* 
                       <div className="mb-5">
