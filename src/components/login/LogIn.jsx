@@ -5,15 +5,23 @@ import Home from "../../pages/Home";
 
 import logo from "../../assets/img/header/somosF5-logoMorado.svg";
 
-import { Navigate } from "react-router-dom";
+import { isRouteErrorResponse, Navigate } from "react-router-dom";
 import { getRoles } from "@testing-library/react";
 
 function LogIn() {
   // 1. recoger email y password que escribe el usuario
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [dni, setDni] = useState();
   const [rol, setRol] = useState("");
-  
+  const [phone, setPhone] = useState();
+  const [horario, setHorario] = useState();
+  const [password, setPassword] = useState();
+  const [image, setImage] = useState("");
+  const [email, setEmail] = useState("");
+  const [cargo, setCargo] = useState("");
+
   //resultado data obtenida
   const [success, setSuccess] = useState(false);
 
@@ -30,6 +38,7 @@ function LogIn() {
         res.data.map((user) => {
           if (user != null) {
             if (user.email === email && user.password === password) {
+              console.log(user);
               setSuccess(true);
               userLogged();
             } else {
@@ -51,7 +60,43 @@ function LogIn() {
       .then((res) => console.log(res));
   };
 
-  console.log(success);
+  //Data de usuario logueado
+  
+  const [empleado, SetEmpleado] = useState({});
+
+  const methodDataLogged = (e) => {
+    e.preventDefault();
+    axios
+      .get(
+        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+      )
+      .then((res) => {
+        // Comprovar que la data escrita coincide con la guardada en la Api
+        res.data.map((user) => {
+          if (user != null) {
+            if (user.email === email && user.password === password) {
+              const data = {
+                email: user.email,
+                surname: user.surname,
+                rol: user.rol,
+                name: user.name,
+                cargo: user.cargo,
+                phone: user.phone,
+                horario: user.horario,
+                dni: user.dni,
+                image: user.image,
+                user: user.password
+              };
+              SetEmpleado(data)
+              console.log(data)
+            } else {
+              return;
+            }
+          }
+        });
+      });
+  };
+
   return (
     <div className="flex-col  ">
       <div className="flex justify-center items-center mt-24 sm:mt-10 ">
@@ -102,7 +147,11 @@ function LogIn() {
 
             <div>
               <button
-                onClick={(e) => methodGet(e)}
+                onClick={(e) => {
+                  methodGet(e);
+                  
+                 
+                }}
                 className="w-full py-3 px-8 tracking-wide  text-white transition-colors duration-200 transform bg-moradoFuerteF5 rounded-md jover:bg-purple-600 focus:outline-none focus:bg-lilaF5"
               >
                 Login
