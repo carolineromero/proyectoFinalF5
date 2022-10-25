@@ -11,17 +11,17 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-  const [userRights, setUserRights] = useState(false);
+  // const [userRights, setUserRights] = useState(false);
 
-  const userAdmin = () => {
-    axios
-      .get(
-        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
-      )
-      .then((res) => console.log(res.data));
-  };
+  // const userAdmin = () => {
+  //   axios
+  //     .get(
+  //       "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+  //     )
+  //     .then((res) => console.log(res.data));
+  // };
 
-  userAdmin();
+  // userAdmin();
 
   return (
     <div className="m-0 flex justify-between bg-transparent p-4 md:bg-slate-100 ">
@@ -59,7 +59,7 @@ export default function Example() {
                   </Link>
                 )}
               </Menu.Item>
-              {userRights ? (
+              {/* {userRights ? ( */}
                 <Menu.Item>
                   {({ active }) => (
                     <Link
@@ -73,9 +73,9 @@ export default function Example() {
                     </Link>
                   )}
                 </Menu.Item>
-              ) : (
+              {/* ) : (
                 ""
-              )}
+              )} */}
 
               <form>
                 <Menu.Item>

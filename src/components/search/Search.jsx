@@ -11,10 +11,16 @@ const Search = () => {
   const [adminRights, setAdminRights] = useState(false)
 
   const methodGet = async () => {
-    await axios.get("http://localhost/proyectofinalBack/trabajadores.php")
+    await axios.get("https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json")
       .then(response => {
-        if (response.data.rol != "admin") { }
-        setUsers(response.data);
+
+        //pasa de abjeto a array
+        const dataArray = Object.entries(response.data).map(i => i[1]);
+
+        
+        
+        setUsers(dataArray)
+        console.log(users)
       }).catch(error => {
         console.log(error);
       })
@@ -37,6 +43,7 @@ const Search = () => {
   }
   useEffect(() => {
     methodGet()
+    console.log(users)
   }, [])
   return (
     <>
@@ -50,7 +57,7 @@ const Search = () => {
   </button>
 </div>
 
-      {results.map((user) => (
+      {users.map((user) => (
 
 
         <div className='relative mx-6 lg:mx-80'>
