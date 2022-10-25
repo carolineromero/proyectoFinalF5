@@ -1,5 +1,4 @@
 import React from 'react'
-import Vector from "../../assets/img/background/Vector.png" 
 
 export default function BgMain() {
   return (

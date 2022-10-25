@@ -1,9 +1,9 @@
 import { Fragment } from 'react'
+import { Link } from 'react-router-dom'
+import { useState, useEffect} from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import logoSomosF5 from '../../assets/img/header/somosF5-logoMorado.svg'
-import { useState, useEffect} from 'react'
 import cerrarIcon from '../../assets/img/header/burgerIcon.png'
-import { Link } from 'react-router-dom'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -20,10 +20,7 @@ export default function Example() {
       setUserRights(false)
     }
   })
-
-
-
-
+  
   return (
     <div className="m-0 flex h-20 justify-between bg-transparent p-4 md:bg-slate-100 ">
       <Link to="/Home">
@@ -31,7 +28,7 @@ export default function Example() {
       </Link>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 bg-grisF">
+          <Menu.Button className="inline-flex w-full justify-center rounded-full border px-4 py-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 bg-grisF">
             <img src={cerrarIcon} alt="icono cerrar" className="w-9" />
             {/*   <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" /> */}
           </Menu.Button>
@@ -46,7 +43,7 @@ export default function Example() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="py-1">
               <Menu.Item>
                 {({ active }) => (

@@ -5,7 +5,6 @@ function NewEmployer() {
   return (
     <> 
 {/* <div className="flex items-center justify-center p-12">
-
     <div className="mx-auto w-full max-w-[550px]">
       <form action="https://formbold.com/s/FORM_ID" method="POST">
       <div className="mb-5">
@@ -19,7 +18,6 @@ function NewEmployer() {
             placeholder="Full Name"
             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
-
       <div className="mb-5">
           <label for="surnames" className="mb-3 block text-base font-medium text-[#07074D]">
            Surnames
@@ -31,7 +29,6 @@ function NewEmployer() {
             placeholder="Surnames"
             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
-
       <div className="mb-5">
          <label for="email" className="mb-3 block text-base font-medium text-[#07074D]">
           Email
@@ -43,7 +40,6 @@ function NewEmployer() {
             placeholder="example@domain.com"
             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
-
       <div className="mb-5">
           <label
             for="dni"
@@ -57,7 +53,6 @@ function NewEmployer() {
            placeholder="enter your dni"
            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
       </div>
-
       <div className="mb-5">
           <label for="telephone" className="mb-3 block text-base font-medium text-[#07074D]">
           Telefono

@@ -11,7 +11,7 @@ const Search = () => {
   const [adminRights, setAdminRights] = useState(false)
 
   const methodGet = async () => {
-    await axios.get("http://localhost/proyectofinalBack/trabajadores.php")
+    await axios.get("https://jsonplaceholder.typicode.com/users")
       .then(response => {
         if (response.data.rol != "admin") { }
         setUsers(response.data);
@@ -42,10 +42,10 @@ const Search = () => {
     <>
 
 <div className= 'flex justify-center grid-cols-2 mx-6'>
-     <input value={search} onChange={searcher} type="search" id="default-search" className="w-60 h-6 flex justify-center items-center bg-grisF5 p-5 m-2 rounded-md border-2 text-moradoFuerteF5" fill=" moradoFuerteF5 " required>
+     <input value={search} onChange={searcher} type="search" id="default-search" className="w-50 h-6 flex justify-center items-center bg-grisF5 p-5 m-2 rounded-md border-2 text-moradoFuerteF5" fill=" moradoFuerteF5 " required>
      </input>
 
-  <button className='w-30 h-6 flex justify-center items-center  text-xs bg-moradoFuerteF5 p-5 m-2 rounded-md border-2 text-white'>
+  <button className='w-20 h-6 flex justify-center items-center  text-xs bg-moradoFuerteF5 p-5 m-2 rounded-md border-2 text-white'>
      Crear nuevo
   </button>
 </div>

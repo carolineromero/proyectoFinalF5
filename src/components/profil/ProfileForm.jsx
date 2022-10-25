@@ -29,28 +29,6 @@ import React from 'react'
                             
                           </div>
                         </div>
-      
-
-
-                        <div>
-                          
-                          
-                            <div className="space-y-1 text-center">
-                             
-                              <div className="flex text-sm text-gray-600">
-                                <label
-                                  htmlFor="file-upload"
-                                  className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
-                                >
-                                  <span>Subir imagen</span>
-                                  <input id="file-upload" name="file-upload" type="file" className="sr-only" />
-                                </label>
-                             
-                              </div>
-                            
-                            </div>
-                         
-                        </div>
                       </div>
                
                     </div>
@@ -142,15 +120,7 @@ import React from 'react'
 
                         </div>
                       </div>
-                      <div className="px-4 py-3 text-right sm:px-6">
-                        <button
-                          type="submit"
-                          className="inline-flex justify-center rounded-md border border-transparent bg-moradoFuerteF5 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
-                          Guardar
-                        </button>
                       </div>
-                    </div>
                   </form>
                 </div>
               </div>

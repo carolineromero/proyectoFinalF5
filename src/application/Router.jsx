@@ -1,12 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import LogIn from '../pages/LogIn'
 import Home from '../pages/Home'
 import Workers from '../pages/Workers'
-import LogIn from '../pages/LogIn'
-import NewEmploy from '../pages/NewEmploy'
 import Profile from '../pages/Profile'
-
-
+import NewEmploy from '../pages/NewEmploy'
 
 function Router() {
   return (
