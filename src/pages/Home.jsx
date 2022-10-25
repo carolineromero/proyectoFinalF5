@@ -1,22 +1,24 @@
 import React from 'react';
-import BtnRegistroEntrada from '../components/home/BtnRegistroEntrada';
+import BgMain from '../components/global/BgMain';
 import Header from '../components/home/Header';
-import Name from '../components/home/Name'
-import ProgressBar from '../components/home/ProgressBar';
-import WeeksDays from '../components/home/WeeksDays';
+import Hero from '../components/home/Hero';
+import Main from '../components/home/Main'
 
 
-function Home() {
+
+
+function Home(props) {
+
+
+
+
   return (
-    <>  
-  <Header/>
-  <Name/>
-  <div className="flex justify-center flex-col md">
-  <WeeksDays/>
-  {/* <ProgressBar/>  */}
-  <BtnRegistroEntrada/>
-  </div>
-    </>
+  <>
+    <BgMain/>
+    <Header/>
+    <Hero/>
+    <Main/>
+  </> 
   )
 }
 

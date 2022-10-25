@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+*{
+ font-family: 'Poppins', sans-serif;
 }
 
-
-
-
-
-
-
+@layer components{
+    .bg-principal{
+        z-index: -1;
+        @apply h-screen fixed overflow-hidden inset-0 bg-grisF5;
+    }
+}

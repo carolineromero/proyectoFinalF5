@@ -1,101 +1,94 @@
-import React from "react";
-import "../../index.css";
-import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-const persons = [
-  {
-    email: "alexandra@gmail.com",
-    password: "alexandra@gmail.com",
-    rol: "admin",
-  },
-  {
-    email: "carlos@gmail.com",
-    password: "carlos@gmail.com",
-    rol: "admin",
-  },
-  {
-    email: "dina@gmail.com",
-    password: "dina@gmail.com",
-    rol: "employer",
-  },
-  {
-    email: "carol@gmail.com",
-    password: "carol@gmail.com",
-    rol: "employer",
-  },
-];
-function LogIn() {
-  const [inputUser, setInputUser] = useState("");
-  console.log(inputUser);
-  const [inputPassword, setInputPassword] = useState("");
-  console.log(inputPassword);
-  const [userMatch, setUserMatch] = useState("");
+/* import { useHistory } from 'react-router-dom' */
+
+function Login() {
+  const [name, setName] = useState("");
+  const [cont, setCont] = useState("");
+  const [user, setUser] = useState("");
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
-  const goToDashboard = () => {
-    persons.map((person) => {
-        if (inputUser === person.email && inputPassword === person.password) {
-          setSuccess(true);
-         
-        } else {
-          console.log("email false");
-        //   alert("El usuario o contraseña ");
-        }
-      });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    methodPost()
   }
- 
+  const methodPost = async () => {
+  const params = new URLSearchParams();
+    params.append('email', name);
+    params.append('password', cont);
+
+    await axios.post("https://jsonplaceholder.typicode.com/users", params)
+      .then(response => {
+        console.log(response.data, "resss")
+        localStorage.setItem("loggedUser", JSON.stringify(response.data))
+        setUser(response.data);
+        setSuccess(true)
+        if (response.data.id !== undefined) {
+          {/* <Link to={'/home'}/>; */ }
+          navigate("/home", {
+            "id": response.data.id
+          })
+
+        }
+
+        alert(response.data.name)
+      }).catch(error => {
+        setSuccess(false)
+        console.log(error);
+      })
+  }
+
 
   return (
-    <div>
-     
-       
-        <div>
-            {success ? <Navigate replace to="/home"/> : "" }
-        </div>
-      <form className="mt-6">
-        <div className="mb-2">
-          <label
-            for="email"
-            className="block text-sm font-semibold text-gray-800"
-          >
-            Email
-          </label>
-          <input
-            value={inputUser}
-            onChange={(e) => setInputUser(e.target.value)}
-            type="email"
-            className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-          />
-        </div>
-        <div className="mb-2">
-          <label
-            for="password"
-            className="block text-sm font-semibold text-gray-800"
-          >
-            Password
-          </label>
-          <input
-            value={inputPassword}
-            onChange={(i) => setInputPassword(i.target.value)}
-            type="password"
-            className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-          />
-        </div>
-        {/* <a href="#" className="text-xs text-purple-600 hover:underline">
-          Forget Password?
-        </a> */}
-        <div className="mt-6">
-          <button
-            onClick={() => goToDashboard()}
-            className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
-          >
-            Login
-          </button>
-        </div>
-      </form>
+
+    <div className="relative rounded-3xl flex items-center mt-44 bg-white z-40 justify-center backdrop-opacity-60 p-12 mx-10">
+
+      <div className=" mx-auto w-full max-w-[550px]">
+        <form onSubmit={handleSubmit} /* action="http://localhost/proyectofinalBack/passwords.php" method="POST" */ >
+          <div className="mb-5">
+            <label for="email" className="mb-3 block text-base font-medium text-[#07074D]">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              /*  id="" */
+              placeholder=""
+              className="w-full rounded-md border trak border-[#e0e0e0] bg-grislyF5 py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+
+          <div className="mb-5">
+            <label for="password" className="mb-3 block text-base font-medium text-[#07074D]">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              onChange={(e) => setCont(e.target.value)}
+              id=""
+              placeholder=""
+              className="w-full rounded-md border  border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+
+          <div>
+            <button onClick={console.log('click')} className="w-full py-3 px-8 tracking-wide  text-white transition-colors duration-200 transform bg-moradoFuerteF5 rounded-md jover:bg-purple-600 focus:outline-none focus:bg-lilaF5">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  );
+  )
 }
-export default LogIn;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Login />);
+
+export default Login;
