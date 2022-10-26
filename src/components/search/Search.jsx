@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import {useAuth} from '../../context/authContext'
 
 const Search = () => {
   //setear los hooks useState
   const [users, setUsers] = useState([])
   const [search, setSearch] = useState("")
-  //función para traer los datos de la API
 
-  const [adminRights, setAdminRights] = useState(false)
+
+  //función para traer los datos de la API
+    const [adminRights, setAdminRights] = useState(false)
 
   const methodGet = async () => {
-    await axios.get("http://localhost/proyectofinalBack/trabajadores.php")
+    await axios.get("https://somos-f5-default-rtdb.europe-west1.firebasedatabase.app/empleados.json")
       .then(response => {
         if (response.data.rol != "admin") { }
         setUsers(response.data);
@@ -38,6 +39,10 @@ const Search = () => {
   useEffect(() => {
     methodGet()
   }, [])
+
+
+
+  
   return (
     <>
 
@@ -62,7 +67,7 @@ const Search = () => {
               <div class="text-xs flex font-semibold text-moradoFuerteF5 w-40">{`${user.name} ${user.surname}`} </div>
 
               <div class="flex text-xs font-light font-family: 'Poppins' text-gray-600">
-                {user.cargo}
+              {user.cargo}
               </div>
             </div>
             <div className="flex flex-row-reverse w-full relative bottom-0">

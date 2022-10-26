@@ -1,12 +1,14 @@
 import React from 'react'
+import {useAuth} from '../../context/authContext'
 
 
+function ProfileForm(){
 
-        function ProfileForm() {
-            const user = JSON.parse(localStorage.getItem("loggedUser"))
-            console.log(user)
-        
-            
+  const {user, userData} = useAuth()
+ 
+
+if (user!==null){
+
         return (
           <>
           <div className='flex justify-center mt-10'>
@@ -23,7 +25,7 @@ import React from 'react'
                           <div className="mt-1 flex items-center">
                             <span className="inline-block  h-20 w-20 overflow-hidden rounded-full bg-gray-100">
     
-                              <img className="h-full w-full object-cover flex justify-center" viewBox="0 0 24 24 " src={user.image} alt="perfil imagen"/>
+                              <img className="h-full w-full object-cover flex justify-center" viewBox="0 0 24 24 " src="https://static3.abc.es/media/summum/2021/10/01/maxi_iglesias-kXKH--620x349@abc.jpeg" alt="perfil imagen"/>
 
                             </span>
                             
@@ -37,16 +39,7 @@ import React from 'react'
                           
                             <div className="space-y-1 text-center">
                              
-                              <div className="flex text-sm text-gray-600">
-                                <label
-                                  htmlFor="file-upload"
-                                  className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
-                                >
-                                  <span>Subir imagen</span>
-                                  <input id="file-upload" name="file-upload" type="file" className="sr-only" />
-                                </label>
-                             
-                              </div>
+                            
                             
                             </div>
                          
@@ -78,7 +71,7 @@ import React from 'react'
                               Nombre
                             </label>
 
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5 p-1 border-gray-300 ">{user.name}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5 p-1 border-gray-300 "> {userData.name}
                             </p>
                           </div>
       
@@ -86,7 +79,7 @@ import React from 'react'
                             <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
                               Apellido
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{user.surname}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.surname}
                             </p>
                             
                           </div>
@@ -95,7 +88,7 @@ import React from 'react'
                             <label htmlFor="dni" className="col-span-6 sm:col-span-6 lg:col-span-2">
                           DNI
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{user.dni}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.dni}
                             </p>
                           </div>
       
@@ -104,7 +97,7 @@ import React from 'react'
                             <label htmlFor="email" className="block text-sm font-medium w-auto text-gray-700">
                               Teléfono de contacto
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{user.email}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.phone}
                             </p>
                           </div>
       
@@ -112,7 +105,7 @@ import React from 'react'
                             <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
                               Correo electrónico
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{user.phone}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.email}
                             </p>
                           </div>
       
@@ -120,7 +113,7 @@ import React from 'react'
                             <label htmlFor="cargo" className="block text-sm font-medium text-gray-700">
                             Cargo laboral 
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{user.cargo}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.cargo}
                             </p>
                           </div>
       
@@ -128,7 +121,7 @@ import React from 'react'
                             <label htmlFor="horario" className="block text-sm font-medium text-gray-700">
                               Jornada laboral
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{user.horario + " horas semanales"}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.horario  + " horas semanales"}
                             </p>
                           </div>
                          
@@ -136,20 +129,13 @@ import React from 'react'
                             <label htmlFor="region" className="block text-sm font-medium text-gray-700">
                             Rol 
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-none shadow-sm">{user.rol}
+                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-none shadow-sm">{userData.rol}
                             </p>
                           </div>
 
                         </div>
                       </div>
-                      <div className="px-4 py-3 text-right sm:px-6">
-                        <button
-                          type="submit"
-                          className="inline-flex justify-center rounded-md border border-transparent bg-moradoFuerteF5 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
-                          Guardar
-                        </button>
-                      </div>
+                  
                     </div>
                   </form>
                 </div>
@@ -161,6 +147,7 @@ import React from 'react'
           </>
         )
       }
+    }
 
 
     export default ProfileForm

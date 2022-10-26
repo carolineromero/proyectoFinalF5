@@ -3,7 +3,7 @@ import React from "react";
 import "../index.css"
 import BgMain from '../components/global/BgMain';
 
-function Page(){
+function Login(){
     return(
         <>
         <BgMain/>
@@ -11,4 +11,4 @@ function Page(){
         </>
     )
 }
-export default Page;
+export default Login;
