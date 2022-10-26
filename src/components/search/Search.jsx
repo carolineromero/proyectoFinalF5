@@ -10,15 +10,20 @@ const Search = () => {
   //función para traer los datos de la API
   const [adminRights, setAdminRights] = useState(false);
 
+  console.log(users);
+
   const methodGet = async () => {
     await axios
       .get(
         "https://somos-f5-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
       )
       .then((response) => {
-        if (response.data.rol != "admin") {
-        }
-        setUsers(response.data);
+        response.data.map((a) => {
+          if (a != null && response.data.rol != "user") {
+            return setUsers(a);
+          }
+        });
+      
       })
       .catch((error) => {
         console.log(error);
@@ -28,9 +33,13 @@ const Search = () => {
   const searcher = (e) => {
     setSearch(e.target.value);
   };
+
+  console.log(users);
+
   //metodo de filtrado 1
   let results = [];
   if (!search) {
+    console.log(users);
     results = users;
   } else {
     results = users.filter(
@@ -40,8 +49,10 @@ const Search = () => {
     );
   }
   useEffect(() => {
-    // methodGet();
+    methodGet();
   }, []);
+
+  console.log(results);
 
   return (
     <>
