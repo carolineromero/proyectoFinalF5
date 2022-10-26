@@ -54,8 +54,8 @@ const Search = () => {
 
 
         <div className='relative mx-6 lg:mx-80'>
-        <div class="mx-5 my-2 grid-cols-5 grid-row-2 rounded-lg border-2 border-b-4 border-l-4 bg-white border-moradoFuerteF5/20 px-4 shadow-xl">
-          <div class="flex h-16 items-center justify-between">
+        <div class="mx-5 my-2 grid-cols-5 grid-row-2 rounded-lg overflow-hidden border-2 border-b-4 border-l-4 bg-white border-moradoFuerteF5/20 px-4 shadow-xl">
+          <div class="flex w-10 rounded-full object-cover items-center justify-between">
             <a href="http://localhost:3000/profile"><img alt="photo" class="w-10 rounded-full" src={user.image} /></a>
             <div class="ml-2" >
 

@@ -92,7 +92,7 @@ return (
       {fechaActual}
      </div>
 
-     <img src={rayarosa} alt="rayarosa" className='ml-14 h-1 w-40  mt-5'/>
+     <img src={rayarosa} alt="rayarosa" className='ml-14 h-1 w-40  mt-2'/>
 
 
      <div className="flex justify-center mt-5">
