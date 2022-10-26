@@ -2,13 +2,22 @@ import LogIn from "../components/login/LogIn";
 import React from "react";
 import "../index.css"
 import BgMain from '../components/global/BgMain';
+import Home from "./Home";
+
 
 function LogInPage(){
-    return(
+    const [usuario, setUsuario] = React.useState(null);
+  return (
+    <>
+      {usuario ? (
         <>
-        <BgMain/>
-        <LogIn/>
+          
+          <BgMain /> <Home />
         </>
-    )
+      ) : (
+        <LogIn setUsuriario={setUsuario} />
+      )}
+    </>
+  );
 }
 export default LogInPage;

@@ -161,17 +161,17 @@ function ProfileForm() {
   // };
 
   // userAdmin();
-  const [userRights, setUserRights] = useState(false);
+  // const [userRights, setUserRights] = useState(false);
 
-  const userAdmin = () => {
-    axios
-      .get(
-        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
-      )
-      .then((res) => console.log(res.data));
-  };
+  // const userAdmin = () => {
+  //   axios
+  //     .get(
+  //       "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+  //     )
+  //     .then((res) => console.log(res.data));
+  // };
 
-  userAdmin();
+  // userAdmin();
   return (
     <>
       <div className="flex justify-center bg-white min-h-min">
@@ -332,7 +332,7 @@ function ProfileForm() {
                     </div>
                   </div>
                   
-                  {userRights ? (
+                  {/* {userRights ? ( */}
                   <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                     <button
                       type="submit"
@@ -347,9 +347,9 @@ function ProfileForm() {
                      Eliminar
                     </button>
                   </div>
-                     ) : (
+                     {/* ) : (
                       ""
-                    )}
+                    )} */}
       
                 </div>
               </form>

@@ -2,99 +2,110 @@ import { useState } from "react";
 import ReactDOM from "react-dom/client";
 import axios from "axios";
 import Home from "../../pages/Home";
-
+import { appfirebase } from "../../auth/firebaseconfig";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import logo from "../../assets/img/header/somosF5-logoMorado.svg";
 
 import { isRouteErrorResponse, Navigate } from "react-router-dom";
 import { getRoles } from "@testing-library/react";
 
-function LogIn() {
+function LogIn(props) {
   // 1. recoger email y password que escribe el usuario
-  const [id, setId] = useState("");
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [dni, setDni] = useState();
-  const [rol, setRol] = useState("");
-  const [phone, setPhone] = useState();
-  const [horario, setHorario] = useState();
-  const [password, setPassword] = useState();
-  const [image, setImage] = useState("");
-  const [email, setEmail] = useState("");
-  const [cargo, setCargo] = useState("");
 
-  //resultado data obtenida
-  const [success, setSuccess] = useState(false);
+  // const [email, setEmail] = useState();
+  // // const [password, setPassword] = useState();
 
-  // 2. llamada a la api
-  const methodGet = (e) => {
-    //e.preventDefault se usa para que no actualice la página
-    e.preventDefault();
-    axios
-      .get(
-        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
-      )
-      .then((res) => {
-        // Comprovar que la data escrita coincide con la guardada en la Api
-        res.data.map((user) => {
-          if (user != null) {
-            if (user.email === email && user.password === password) {
-              console.log(user);
-              setSuccess(true);
-              userLogged();
-            } else {
-              return;
-            }
-          }
-        });
-      });
-  };
+  // //resultado data obtenida
+  //  const [success, setSuccess] = useState(false);
 
-  const userLogged = () => {
-    const test = { test: "1", user: email, user: rol };
+  // // 2. llamada a la api
+  // const methodGet = (e) => {
+  //   //e.preventDefault se usa para que no actualice la página
+  //   e.preventDefault();
+  //   axios
+  //     .get(
+  //       "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+  //     )
+  //     .then((res) => {
+  //       // Comprovar que la data escrita coincide con la guardada en la Api
+  //       res.data.map((user) => {
+  //         if (user != null) {
+  //           if (user.email === email && user.password === password) {
+  //             console.log(user);
+  //             setSuccess(true);
 
-    axios
-      .post(
-        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json",
-        test
-      )
-      .then((res) => console.log(res));
-  };
+  //           } else {
+  //             return;
+  //           }
+  //         }
+  //       });
+  //     });
+  // };
+
+  // const userLogged = () => {
+  //   const test = { test: "1", user: email, user: rol };
+
+  //   axios
+  //     .post(
+  //       "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json",
+  //       test
+  //     )
+  //     .then((res) => console.log(res));
+  // };
 
   //Data de usuario logueado
-  
-  const [empleado, SetEmpleado] = useState({});
 
-  const methodDataLogged = (e) => {
-    e.preventDefault();
-    axios
-      .get(
-        "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
-      )
-      .then((res) => {
-        // Comprovar que la data escrita coincide con la guardada en la Api
-        res.data.map((user) => {
-          if (user != null) {
-            if (user.email === email && user.password === password) {
-              const data = {
-                email: user.email,
-                surname: user.surname,
-                rol: user.rol,
-                name: user.name,
-                cargo: user.cargo,
-                phone: user.phone,
-                horario: user.horario,
-                dni: user.dni,
-                image: user.image,
-                user: user.password
-              };
-              SetEmpleado(data)
-              console.log(data)
-            } else {
-              return;
-            }
-          }
-        });
+  // const [empleado, SetEmpleado] = useState({});
+
+  // const methodDataLogged = (e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .get(
+  //       "https://fichajefactoria-default-rtdb.europe-west1.firebasedatabase.app/empleados.json"
+  //     )
+  //     .then((res) => {
+  //       // Comprovar que la data escrita coincide con la guardada en la Api
+  //       res.data.map((user) => {
+  //         if (user != null) {
+  //           if (user.email === email && user.password === password) {
+  //             const data = {
+  //               email: user.email,
+  //               surname: user.surname,
+  //               rol: user.rol,
+  //               name: user.name,
+  //               cargo: user.cargo,
+  //               phone: user.phone,
+  //               horario: user.horario,
+  //               dni: user.dni,
+  //               image: user.image,
+  //               user: user.password
+  //             };
+  //             SetEmpleado(data)
+  //             console.log(data)
+  //           } else {
+  //             return;
+  //           }
+  //         }
+  //       });
+  //     });
+  // };
+  const iniciarSesion = (correo, password) => {
+    appfirebase
+      .auth()
+      .signInWithEmailAndPassword(correo, password)
+      .then((usuarioFirebase) => {
+        
+        props.setUsuario(usuarioFirebase);
       });
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const correo = e.target.emailField.value;
+    const password = e.target.passwordField.value;
+    if (iniciarSesion) {
+      iniciarSesion(correo, password);
+    }
   };
 
   return (
@@ -103,12 +114,12 @@ function LogIn() {
         <img src={logo} alt="logo" className="w-40  sm:w-80"></img>
       </div>
       {/* if success is true will go to home */}
-      {console.log(success, "true?")}
-      {success && <Navigate to="/home" replace={true} />}
+
+     
 
       <div className=" relative rounded-3xl flex items-center mt-10 bg-white z-40 justify-center backdrop-opacity-60 p-12 mx-10 sm:mx-80  ">
         <div className=" mx-auto w-full max-w-[400px]">
-          <form /* action="http://localhost/proyectofinalBack/passwords.php" method="POST" */
+          <form method="POST" 
           >
             <div className="mb-5">
               <label
@@ -120,8 +131,6 @@ function LogIn() {
               <input
                 type="email"
                 name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 /*  id="" */
                 placeholder=""
                 className="w-full rounded-md border trak border-[#e0e0e0] bg-grislyF5 py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -138,8 +147,6 @@ function LogIn() {
               <input
                 type="password"
                 name="password"
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
                 placeholder=""
                 className="w-full rounded-md border  border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
@@ -147,11 +154,7 @@ function LogIn() {
 
             <div>
               <button
-                onClick={(e) => {
-                  methodGet(e);
-                  
-                 
-                }}
+                onClick={(e) => submitHandler()}
                 className="w-full py-3 px-8 tracking-wide  text-white transition-colors duration-200 transform bg-moradoFuerteF5 rounded-md jover:bg-purple-600 focus:outline-none focus:bg-lilaF5"
               >
                 Login
