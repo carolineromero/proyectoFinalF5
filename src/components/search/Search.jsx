@@ -10,7 +10,6 @@ const Search = () => {
   //función para traer los datos de la API
   const [adminRights, setAdminRights] = useState(false);
 
-  console.log(users);
 
   const methodGet = async () => {
     await axios
@@ -19,11 +18,13 @@ const Search = () => {
       )
       .then((response) => {
         response.data.map((a) => {
-          if (a != null && response.data.rol != "user") {
-            return setUsers(a);
+          if (a != null) {
+            users.push(a);
           }
         });
-      
+        // if (response.data.rol != "user") {
+        //   setUsers(response.data);
+        // }
       })
       .catch((error) => {
         console.log(error);
@@ -33,13 +34,9 @@ const Search = () => {
   const searcher = (e) => {
     setSearch(e.target.value);
   };
-
-  console.log(users);
-
   //metodo de filtrado 1
   let results = [];
   if (!search) {
-    console.log(users);
     results = users;
   } else {
     results = users.filter(
