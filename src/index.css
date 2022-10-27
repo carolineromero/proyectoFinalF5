@@ -18,7 +18,7 @@
 
 
 
-.toggle--button{
+.togglebutton{
     width: 260px;
     height: 75px;
     margin-top: 5%;
@@ -38,7 +38,7 @@
   }
  
 
-  .toggle--close{
+  .toggleclose{
     width: 280px;
     height: 75px;
     margin-top: 5%;

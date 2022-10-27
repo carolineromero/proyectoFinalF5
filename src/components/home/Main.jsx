@@ -66,10 +66,10 @@ return (
 
 
      <div className="flex justify-center mt-5 w-48 mx-8">
-        <button style={{ display: show ? "block" : "none" }} onClick={() => {showTimeEntrada(); setShow((s) => !s)}} id="boton-fichaje-entrada" className='toggle--button' >
+        <button style={{ display: show ? "block" : "none" }} onClick={() => {showTimeEntrada(); setShow((s) => !s)}} id="boton-fichaje-entrada" className='togglebutton' >
           Registrar entrada
         </button>
-        <button  style={{ display: show ? "none" : "block" }} onClick={() => {showTimeSalida()}} className='toggle--close' >
+        <button  style={{ display: show ? "none" : "block" }} onClick={() => {showTimeSalida()}} className='toggleclose' >
           Registrar salida
         </button>
       </div>
