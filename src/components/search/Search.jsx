@@ -1,47 +1,66 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {useAuth} from '../../context/authContext'
+import { Link } from 'react-router-dom'
 
 const Search = () => {
   //setear los hooks useState
-  const [users, setUsers] = useState([])
-  const [search, setSearch] = useState("")
-
+  const [employees, setEmployees] = useState([])
+  const [search, setSearch] = useState('')
+  const {user, userData} = useAuth()
+  const [results, setResults] = useState([])
 
   //función para traer los datos de la API
     const [adminRights, setAdminRights] = useState(false)
 
   const methodGet = async () => {
-    await axios.get("https://somos-f5-default-rtdb.europe-west1.firebasedatabase.app/empleados.json")
-      .then(response => {
-        if (response.data.rol != "admin") { }
-        setUsers(response.data);
-      }).catch(error => {
-        console.log(error);
-      })
-  }
+
+   let response = await axios.get("https://somos-f5-default-rtdb.europe-west1.firebasedatabase.app/empleados.json")
+   let data = await response.data
+   setEmployees(data.filter(element=> element!==null));
+   setResults(data.filter(element=> element!==null))
+      }
+
   //función de búsqueda
   const searcher = (e) => {
-    setSearch(e.target.value)
-  }
-  //metodo de filtrado 1
-  let results = []
-  if (!search) {
-    results = users
-  } else {
-    results = users.filter((data) =>
-      data.name.toLowerCase().includes(search.toLocaleLowerCase()) +
-      data.surname.toLowerCase().includes(search.toLocaleLowerCase())
+    let valueSearch = e.target.value
+    setSearch(valueSearch)
+    
 
-    )
+
+    if (valueSearch=='') {
+      setResults(employees)
+ 
+    } else {
+      let filteredResult = employees.filter((data) => {
+        return data.name.toLowerCase().includes(valueSearch.toLocaleLowerCase()) 
+       // data.surname.toLowerCase().includes(search.toLocaleLowerCase()
+      }
+      )
+      setResults(filteredResult)
+      console.log(results);
+    }
+ 
+
+
 
   }
+
+ 
   useEffect(() => {
     methodGet()
+     //metodo de filtrado 1
+
+   
+
+
   }, [])
 
 
+  
+ 
 
+  if (user!==null){
   
   return (
     <>
@@ -49,25 +68,28 @@ const Search = () => {
 <div className= 'flex justify-center grid-cols-2 mx-6'>
      <input value={search} onChange={searcher} type="search" id="default-search" className="w-60 h-6 flex justify-center items-center bg-grisF5 p-5 m-2 rounded-md border-2 text-moradoFuerteF5" fill=" moradoFuerteF5 " required>
      </input>
-
+     <Link to="/new-employ">
   <button className='w-30 h-6 flex justify-center items-center  text-xs bg-moradoFuerteF5 p-5 m-2 rounded-md border-2 text-white'>
      Crear nuevo
   </button>
+  </Link>
 </div>
 
-      {results.map((user) => (
+       
+
+      { results?
+      results.map((employee) => (
 
 
         <div className='relative mx-6 lg:mx-80'>
-        <div class="mx-5 my-2 grid-cols-5 grid-row-2 rounded-lg border-2 border-b-4 border-l-4 bg-white border-moradoFuerteF5/20 px-4 shadow-xl">
-          <div class="flex h-16 items-center justify-between">
-            <a href="http://localhost:3000/profile"><img alt="photo" class="w-10 rounded-full" src={user.image} /></a>
-            <div class="ml-2" >
+        <div className="mx-5 my-2 grid-cols-5 grid-row-2 rounded-lg border-2 border-b-4 border-l-4 bg-white border-moradoFuerteF5/20 px-4 shadow-xl">
+          <div className="flex h-16 items-center justify-between">
+            <a href="http://localhost:3000/profile"><img alt="photo" className="w-18 rounded-full lg:w-10" src={employee.image} /></a>
+            <div className="ml-2" >
 
-              <div class="text-xs flex font-semibold text-moradoFuerteF5 w-40">{`${user.name} ${user.surname}`} </div>
+              <div className="text-xs flex font-semibold text-moradoFuerteF5 w-40"> {employee.name} {employee.surname}</div>
 
-              <div class="flex text-xs font-light font-family: 'Poppins' text-gray-600">
-              {user.cargo}
+              <div className="flex text-xs font-light font-family: 'Poppins' text-gray-600">{employee.cargo}
               </div>
             </div>
             <div className="flex flex-row-reverse w-full relative bottom-0">
@@ -97,9 +119,14 @@ const Search = () => {
         </div>
         </div>
 
-      ))}
+      ))
+    
+    
+    : (<div>no hay resultados</div>)
+    }
 
     </>
   )
+      }
 }
 export default Search

@@ -11,7 +11,8 @@ if (user!==null){
 
         return (
           <>
-          <div className='flex justify-center mt-10'>
+         
+ <div className='flex justify-center mt-10'>
           <div className="lg:flex justify-center border-none bg-white w-3/4 py-5 sm: rounded-xl">
             <div>
               <div className="flex justify-center rounded-xl">
@@ -25,24 +26,11 @@ if (user!==null){
                           <div className="mt-1 flex items-center">
                             <span className="inline-block  h-20 w-20 overflow-hidden rounded-full bg-gray-100">
     
-                              <img className="h-full w-full object-cover flex justify-center" viewBox="0 0 24 24 " src="https://static3.abc.es/media/summum/2021/10/01/maxi_iglesias-kXKH--620x349@abc.jpeg" alt="perfil imagen"/>
+                              <img className="h-full w-full object-cover flex justify-center" viewBox="0 0 24 24 " src={userData.image} alt="perfil imagen"/>
 
                             </span>
                             
                           </div>
-                        </div>
-      
-
-
-                        <div>
-                          
-                          
-                            <div className="space-y-1 text-center">
-                             
-                            
-                            
-                            </div>
-                         
                         </div>
                       </div>
                
@@ -59,91 +47,89 @@ if (user!==null){
             </div>
       
             <div className="mt-2 sm:mt-0">
-              <div className="attendees-cont grid gx3 gg30 ">
+              <div className="attendees-cont ">
               
-                <div className="mt-5 md:col-span-2 md:mt-0">
+                <div className="mt-5  md:mt-0">
                   <form action="#" method="POST">
                     <div className="overflow-hidden sm:rounded-md">
                       <div className="bg-white px-4 py-5 sm:p-6">
-                        <div className="grid grid-cols-6 gap-6">
-                          <div className="col-span-6 sm:col-span-3">
-                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                        <div className="grid sm:cols-1 sm:grid-cols-2 gap-6">
+                          <div className="">
+                            <label htmlFor="first-name" className="block text-sm  text-moradoFuerteF5 font-semibold">
                               Nombre
                             </label>
 
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5 p-1 border-gray-300 "> {userData.name}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md  ">{userData.name}
                             </p>
                           </div>
       
-                          <div className="col-span-6 sm:col-span-3">
-                            <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                          <div className="">
+                            <label htmlFor="last-name" className="block text-sm  text-moradoFuerteF5 font-semibold">
                               Apellido
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.surname}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md ">{userData.surname}
                             </p>
                             
                           </div>
       
-                          <div className="col-span-6 sm:col-span-4">
-                            <label htmlFor="dni" className="col-span-6 sm:col-span-6 lg:col-span-2">
+                          <div className="">
+                            <label htmlFor="dni" className="col-span-6 sm:col-span-6 lg:col-span-2  text-moradoFuerteF5 font-semibold">
                           DNI
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.dni}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md ">{userData.dni}
                             </p>
                           </div>
       
       
-                          <div className="col-span-6 sm:col-span-4">
-                            <label htmlFor="email" className="block text-sm font-medium w-auto text-gray-700">
+                          <div className="">
+                            <label htmlFor="email" className="block text-sm w-auto  text-moradoFuerteF5 font-semibold ">
                               Teléfono de contacto
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.phone}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md ">{userData.email}
                             </p>
                           </div>
       
-                          <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                            <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
+                          <div className="">
+                            <label htmlFor="phone-number" className="block text-sm text-moradoFuerteF5 font-semibold">
                               Correo electrónico
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.email}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md ">{userData.phone}
                             </p>
                           </div>
       
-                          <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                            <label htmlFor="cargo" className="block text-sm font-medium text-gray-700">
+                          <div className="">
+                            <label htmlFor="cargo" className="block text-sm text-moradoFuerteF5 font-semibold">
                             Cargo laboral 
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.cargo}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md ">{userData.cargo}
                             </p>
                           </div>
       
-                          <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                            <label htmlFor="horario" className="block text-sm font-medium text-gray-700">
+                          <div className="">
+                            <label htmlFor="horario" className="block text-sm text-moradoFuerteF5 font-semibold">
                               Jornada laboral
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-gray-300 shadow-sm">{userData.horario  + " horas semanales"}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md  p-2">{userData.horario + " horas semanales"}
                             </p>
                           </div>
                          
-                          <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                            <label htmlFor="region" className="block text-sm font-medium text-gray-700">
+                          <div className=" ">
+                            <label htmlFor="region" className="block text-sm text-moradoFuerteF5 font-semibold">
                             Rol 
                             </label>
-                            <p className="mt-1 block w-11/12 m-2 rounded-md bg-grisF5  p-1 border-none shadow-sm">{userData.rol}
+                            <p className="mt-1 block w-9/12 m-2 rounded-md   p-2 ">{userData.rol}
                             </p>
                           </div>
 
                         </div>
                       </div>
-                  
-                    </div>
+                      </div>
                   </form>
                 </div>
               </div>
             </div>
       </div>
       </div>
-
           </>
         )
       }
