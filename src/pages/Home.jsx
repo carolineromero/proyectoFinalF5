@@ -1,11 +1,24 @@
-import React from 'react'
-import LogInPage from './LogInPage'
+import React from 'react';
+import BgMain from '../components/global/BgMain';
+import Header from '../components/home/Header';
+import Hero from '../components/home/Hero';
+import Main from '../components/home/Main'
 
-function Home() {
+
+
+
+function Home(props) {
+
+
+
+
   return (
-    <>
-   <LogInPage/>
-    </>
+  <>
+    <BgMain/>
+    <Header/>
+    <Hero/>
+    <Main/>
+  </> 
   )
 }
 

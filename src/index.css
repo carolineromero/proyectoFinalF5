@@ -1,16 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+ 
+    font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components{
+    .bg-principal{
+        z-index: -1;
+        @apply h-screen fixed overflow-hidden inset-0 bg-grisF5;
+    }
 }
+
+
+
+.toggle--button{
+    width: 260px;
+    height: 75px;
+    margin-top: 5%;
+    margin-bottom:2%;
+    border: none;
+    font-size: 18px;
+    background-color:#33C8CD;
+    color: white;
+    cursor: pointer;
+    box-shadow: #009FA5 5px 5px ;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    
+    
+  }
+ 
+
+  .toggle--close{
+    width: 280px;
+    height: 75px;
+    margin-top: 5%;
+    margin-bottom:2%;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    background-color: #FF4700;
+    box-shadow: #B43200 5px 5px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  };
+
+
+  
+  /* Cuando la pantalla es menor a 900px  (tablets y teléfonos inteligentes)*/
+@media only screen and (max-width : 900px) {
+   
+    
+    .toggle--button{
+        width: 150px;
+        height: 75px;
+        margin-top: 5%;
+        margin-bottom:5%;
+        border: none;
+        font-size: 18px;
+        
+      
+        
+        }
+    }

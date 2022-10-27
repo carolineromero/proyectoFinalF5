@@ -1,0 +1,40 @@
+[
+    {
+      "id": "1",
+      "name": "Carlos",
+      "surname": "Pinilla",
+      "email": "carlospinilla@factoria.com",
+      "dni": "1212125A",
+      "phone": "630525252",
+      "cargo": "formador",
+      "image": "https://static3.abc.es/media/summum/2021/10/01/maxi_iglesias-kXKH--620x349@abc.jpeg",
+      "rol": "user",
+      "horario": "40"
+    },
+    {
+      "id": "11",
+      "name": "Alexandra",
+      "surname": "Galarza",
+      "email": "alexgalarza@factoria.com",
+      "dni": "3416125c",
+      "phone": "254898585",
+      "cargo": "formadora",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EX2B9x9Q6X35NH9p0LjRa9VhY5BEaZqRMg&usqp=CAU",
+      "rol": "user",
+      "horario": "40"
+    },
+    {
+      "id": "12",
+      "name": "Isabel",
+      "surname": "Mercier",
+      "email": "isabelmercier@factoria.com",
+      "dni": "561655984D",
+      "phone": "56895555",
+      "cargo": "administración",
+      "image": "http://res.freestockphotos.biz/pictures/14/14901-a-beautiful-young-woman-in-business-attire-pv.jpg",
+      "rol": "admin",
+      "horario": "40"
+    }
+  ]
+
+  

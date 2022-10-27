@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+###### Factoría F5 / Somos F5
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo-somosF5](src/assets/img/readme/logo-readme.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+***
 
-### `npm start`
+## 💻 Tabla de Contenidos
+1. [Información General](#información-general)
+2. [Capturas de Pantalla](#capturas-de-pantalla)
+3. [Características técnicas de diseño](#🎨-características-técnicas-de-diseño)
+4. [Tecnologías](#🛠️-tecnologías)
+5. [Instalación](#instalación)
+6. [Hoja de ruta](#hoja-de-ruta)
+7. [Enlaces de interés](#🔗-enlaces-de-interés)
+8. [Contacto](#🤝-contacto)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***
+## ℹ️ Información General
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Somos F5** es una web interna, para el fichaje de horario laboral de los trabajadores de Factoria F5
 
-### `npm test`
+*Proyecto en proceso de desarrollo*   
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📋 [Presentación del proyecto](https://www.canva.com/design/DAFNi5OKi_w/7oM3yrKq2Um6uIjQ2tPPAQ/view?utm_content=DAFNi5OKi_w&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
-### `npm run build`
+***
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🖼️ Captura de pantalla
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![screen](src/assets/img/readme/screenshot.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+***
+## 🎨 Características técnicas de diseño 
+### Gama de colores: 
+![colors](src/assets/img/readme/gamaColores.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Fuente de letra: 
+- Poppins
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+***
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tecnologías
+Lista de tecnologías utilizadas en el desarrollo del proyecto:
+* React js. (18.2)
+* Axios (0.27.2)
+* Tailwind
+* Firebase (Autenticación y Database)
 
-### Code Splitting
+***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Instalación
 
-### Analyzing the Bundle Size
+1.  Ingresar en Visual Studio Code
+2.  Clonar el proyecto con el comando: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ ``` 
+git clone https://github.com/carolineromero/proyectoFinalF5.git
+```
 
-### Making a Progressive Web App
+3. Abrir otra terminal e instalar las dependencias:
+ ``` 
+npm i
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Ejecutar el siguiente comando, para abrir en el navegador
+ ``` 
+npm start
+```
+***
+## 🗺️ Hoja de ruta
 
-### Advanced Configuration
+En esta primera entrega, presentamos una web responsive. Donde lo primero que se puede ver es un login funcional, que solo deja acceder si los datos coinciden con los de la base de datos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Dependiendo de quien ingrese en la web, la página Home, dará un saludo u otro, y se podrá acceder al perfil del trabajado loggeado.
 
-### Deployment
+En Home se puede 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+En futuras actualizaciones las features a realizar son:
 
-### `npm run build` fails to minify
+* 
+* 
+* 
+* 
+* 
+* Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 🔗 Enlaces de interés
+
+* [Prototipo figma](https://www.figma.com/file/jetl8b4oaoR1oBQNa2jWFT/Something-is-Cooking?node-id=0%3A1)  
+* [Proyecto web](https://somethingiscooking.netlify.app/)
+
+## 🤝 Autoras
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/CarmenVidal"><img src="https://avatars.githubusercontent.com/u/105284305?v=4" width="100px;" alt=""/><br /><sub><b>Carmen Vidal</b></sub></a><br /><a href="https://www.linkedin.com/in/carmen-vidal-teran/" <a href="" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="carmen vidal" height="18" /></a> </td>
+    <td align="center"><a href="https://github.com/carolineromero"><img src="https://avatars.githubusercontent.com/u/105285220?v=4" width="100px;" alt=""/><br /><sub><b>Carolina Romero</b></sub></a><br /><a href="https://www.linkedin.com/in/carolinaroomero/" <a href="https://linkedin.com/in/carolinaroomero" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="carolinaroomero" height="18" /></a> </td>
+    <td align="center"><a href="https://github.com/Dweina1920"><img src="https://avatars.githubusercontent.com/u/105285010?v=4" width="100px;" alt=""/><br /><sub><b>Dina Yamani</b></sub></a><br /><a href="https://www.linkedin.com/in/dina-yamani/" <a href="https://www.linkedin.com/in/dina-yamani/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dina yamani" height="18" /></a> </td>
+    <td align="center"><a href="https://github.com/RABIAZEEM"><img src="https://avatars.githubusercontent.com/u/105284208?v=4" width="100px;" alt=""/><br /><sub><b>Rabia Azeem</b></sub></a><br /><a href="https://www.linkedin.com/in/rabiaazeem/" <a href="https://www.linkedin.com/in/rabiaazeem/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rabia azeem" height="18" /></a> </td>
+    <td align="center"><a href="https://github.com/gilsusana"><img src="https://avatars.githubusercontent.com/u/105043250?v=4" width="100px;" alt=""/><br /><sub><b>Susana Gil</b></sub></a><br /><a href="https://www.linkedin.com/in/susanagildeveloper/" <a href="https://www.linkedin.com/in/susanagildeveloper/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="susana gil" height="18" /></a></td>
+  </tr>
+  </table>
+
+
+  
