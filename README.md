@@ -6,14 +6,14 @@
 ***
 
 ## 💻 Tabla de Contenidos
-1. [Información General](#información-general)
-2. [Capturas de Pantalla](#capturas-de-pantalla)
+1. [Información General](#ℹ️-información-general)
+2. [Capturas de Pantalla](#🖼️-captura-de-pantalla)
 3. [Características técnicas de diseño](#🎨-características-técnicas-de-diseño)
 4. [Tecnologías](#🛠️-tecnologías)
-5. [Instalación](#instalación)
-6. [Hoja de ruta](#hoja-de-ruta)
+5. [Instalación](#🚀-instalación)
+6. [Hoja de ruta](#🗺️-hoja-de-ruta)
 7. [Enlaces de interés](#🔗-enlaces-de-interés)
-8. [Contacto](#🤝-contacto)
+8. [Autoras](#🤝-autoras)
 
 ***
 ## ℹ️ Información General
@@ -22,13 +22,13 @@
 
 *Proyecto en proceso de desarrollo*   
 
-## 📋 [Presentación del proyecto](https://www.canva.com/design/DAFNi5OKi_w/7oM3yrKq2Um6uIjQ2tPPAQ/view?utm_content=DAFNi5OKi_w&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+## 📋 [Presentación del proyecto](https://www.canva.com/design/DAFQCD2phzg/3Jv58HCHftRu8S3LdiDnPA/view?utm_content=DAFQCD2phzg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 ***
 
 ## 🖼️ Captura de pantalla
 
-![screen](src/assets/img/readme/screenshot.png)
+![screen](src/assets/img/readme/figma.png)
 
 
 
@@ -79,22 +79,26 @@ En esta primera entrega, presentamos una web responsive. Donde lo primero que se
 
 Dependiendo de quien ingrese en la web, la página Home, dará un saludo u otro, y se podrá acceder al perfil del trabajado loggeado.
 
-En Home se puede 
+En Home se puede puede ver la semana actual, y el dia en concreto. Con un botón se puede imprimir en pantalla la y la salida.
+
+En trabajadores, se puede hacer un filtrado de y busqueda de empleados, y además se puede crear un trabajador nuevo en la base de datos. 
 
 En futuras actualizaciones las features a realizar son:
 
-* 
-* 
-* 
-* 
-* 
+* Rol de usuarios
+* Guardar registro horario en la base de datos
+* Poder descargar un documento del registro
+* Hacer un filtro de horas, para la descarga del docuemento
+* Editar y eliminar un trabajador de la plataforma
+* Que se refleje un nuevo trabajador creado en la plataforma
+* Progress bar
 * Testing
 
 
 ## 🔗 Enlaces de interés
 
-* [Prototipo figma](https://www.figma.com/file/jetl8b4oaoR1oBQNa2jWFT/Something-is-Cooking?node-id=0%3A1)  
-* [Proyecto web](https://somethingiscooking.netlify.app/)
+* [Prototipo figma](https://www.figma.com/proto/IrGdfK7wnR4hjpldf6q555/Proyecto-Final-Factoria-F5?node-id=369%3A980&scaling=scale-down&page-id=0%3A1&starting-point-node-id=369%3A980&show-proto-sidebar=1)  
+* [Proyecto web](https://somosf5.vercel.app)
 
 ## 🤝 Autoras
 
